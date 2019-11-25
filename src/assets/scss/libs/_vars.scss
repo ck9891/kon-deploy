@@ -21,7 +21,7 @@
 // Font.
 	$font: (
 		family:				('Source Sans Pro', Helvetica, sans-serif),
-		family-fixed:		('Courier New', monospace),
+		family-fixed:		('Helvetica Neue', sans-serif),
 		weight:				300,
 		weight-bold:		600,
 		letter-spacing:		0.025em,
@@ -31,7 +31,7 @@
 // Palette.
 	$palette: (
 		bg: 			    #0770b9,
-		bg-alt:				#2a2f4a,
+		bg-alt:				#fff,
 		fg:					#ffffff,
 		fg-bold:			#ffffff,
 		fg-light:			rgba(244,244,255,0.2),
@@ -43,5 +43,6 @@
 		accent3: #449c45,
 		accent4:			#e7b788,
 		accent5:			#8ea9e8,
-		accent6:			#87c5a4
+		accent6:			#87c5a4,
+		text-colour: (68, 157, 70)
 	);
