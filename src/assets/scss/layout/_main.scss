@@ -9,11 +9,11 @@
 	#main {
 		background-color: _palette(bg-alt);
 		.services {
-			color: $text-colour;
+			color: _palette(text-colour);
 		}
 		#two {
 			.inner {
-				color: $text-colour;
+				color: _palette(text-colour);
 			}
 		}
 		> * {
