@@ -13,7 +13,9 @@
 		}
 		#two {
 			.inner {
+				p {
 				color: _palette(text-colour);
+				}
 			}
 		}
 		> * {
