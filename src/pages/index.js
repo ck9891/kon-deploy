@@ -28,24 +28,25 @@ class HomeIndex extends React.Component {
 
             <div id="main">
               <section id="one" className="tiles">
+                
+                <article className="services">
+                  <header className="major">
+                    <h3>Tempus</h3>
+                    <p><ul>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                  </ul></p>
+                  </header>
+                  <Link to="/landing" className="link primary"></Link>
+                </article>
                 <article style={{ backgroundImage: `url(${pic01})` }}>
                   <header className="major">
                     <h3>Services</h3>
                     <p>Ipsum dolor sit amet</p>
                   </header>
-                  <ul>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                  </ul>
-                  <Link to="/landing" className="link primary"></Link>
-                </article>
-                <article style={{ backgroundImage: `url(${pic02})` }}>
-                  <header className="major">
-                    <h3>Tempus</h3>
-                    <p>feugiat amet tempus</p>
-                  </header>
+                  
                   <Link to="/landing" className="link primary"></Link>
                 </article>
               </section>

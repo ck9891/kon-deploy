@@ -8,6 +8,9 @@
 
 	#main {
 		background-color: _palette(bg-alt);
+		.services {
+			color: $text-colour;
+		}
 		#two {
 			.inner {
 				color: $text-colour;
