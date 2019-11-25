@@ -8,7 +8,11 @@
 
 	#main {
 		background-color: _palette(bg-alt);
-
+		#two {
+			.inner {
+				color: $text-colour;
+			}
+		}
 		> * {
 			border-top: solid 1px _palette(border);
 
