@@ -117,6 +117,16 @@
 						padding: 1rem;
 					}
 				}
+				&:hover {
+					h3 {
+						color: #000;
+						border-bottom-color: #000;
+						&:after {
+							background-color: #000;
+						}
+					}
+				
+				}
 				&:before {
 					
 					background-color: _palette(accent2);

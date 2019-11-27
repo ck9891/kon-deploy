@@ -1,6 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+// library.add(faEnvelope, faKey);
+
+
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
@@ -33,7 +38,7 @@ class HomeIndex extends React.Component {
                   <header className="major">
                     <h3>Services</h3>
                     <p><ul>
-                    <li>item</li>
+                    <li>{<FontAwesomeIcon icon={faCoffee} />}</li>
                     <li>item</li>
                     <li>item</li>
                     <li>item</li>
