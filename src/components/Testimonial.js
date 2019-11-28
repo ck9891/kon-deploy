@@ -14,3 +14,5 @@ const Testimonial = (props) => {
         </div>
     )
 }
+
+export default Testimonial
