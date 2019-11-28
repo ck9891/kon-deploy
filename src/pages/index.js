@@ -71,6 +71,7 @@ class HomeIndex extends React.Component {
                 </div>
               </section>
               <section id="three">
+                <h3>Testimonials</h3>
                 <Testimonial 
                 person = "John Doe"
                 text = "lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum" 
