@@ -73,6 +73,16 @@ class HomeIndex extends React.Component {
                   </ul>
                 </div>
               </section>
+              <section id="three" className="tiles">
+                <article style={{ backgroundImage: `url(${pic01})` }}>
+                  <header className="major">
+                    <h3>Testimonials</h3>
+                    <p>Ipsum dolor sit amet</p>
+                  </header>
+                  
+                  <Link to="/landing" className="link primary"></Link>
+                </article>
+              </section>
             </div>
           </Layout>
         )
