@@ -1,6 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+// library.add(faEnvelope, faKey);
+
+
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
@@ -31,9 +36,9 @@ class HomeIndex extends React.Component {
                 
                 <article className="services">
                   <header className="major">
-                    <h3>Tempus</h3>
+                    <h3>Services</h3>
                     <p><ul>
-                    <li>item</li>
+                    <li>{<FontAwesomeIcon icon={faCoffee} />}</li>
                     <li>item</li>
                     <li>item</li>
                     <li>item</li>
@@ -42,10 +47,7 @@ class HomeIndex extends React.Component {
                   <Link to="/landing" className="link primary"></Link>
                 </article>
                 <article style={{ backgroundImage: `url(${pic01})` }}>
-                  <header className="major">
-                    <h3>Services</h3>
-                    <p>Ipsum dolor sit amet</p>
-                  </header>
+                 
                   
                   <Link to="/landing" className="link primary"></Link>
                 </article>
@@ -64,13 +66,7 @@ class HomeIndex extends React.Component {
                     tincidunt. Vivamus et sagittis libero. Mauris aliquet magna
                     magna sed nunc rhoncus amet pharetra et feugiat tempus.
                   </p>
-                  <ul className="actions">
-                    <li>
-                      <Link to="/landing" className="button next">
-                        Get Started
-                      </Link>
-                    </li>
-                  </ul>
+
                 </div>
               </section>
               <section id="three" className="tiles">
