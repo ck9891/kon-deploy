@@ -8,6 +8,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
+import Testimonial from '../components/Testimonial'
 
 import pic01 from '../assets/images/pic01.jpg'
 import pic02 from '../assets/images/pic02.jpg'
@@ -69,15 +70,11 @@ class HomeIndex extends React.Component {
 
                 </div>
               </section>
-              <section id="three" className="tiles">
-                <article style={{ backgroundImage: `url(${pic01})` }}>
-                  <header className="major">
-                    <h3>Testimonials</h3>
-                    <p>Ipsum dolor sit amet</p>
-                  </header>
-                  
-                  <Link to="/landing" className="link primary"></Link>
-                </article>
+              <section id="three">
+                <Testimonial 
+                person = "John Doe"
+                text = "lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum" 
+                />
               </section>
             </div>
           </Layout>
