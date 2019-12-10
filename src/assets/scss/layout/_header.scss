@@ -143,6 +143,12 @@
 			&.style4 { .logo { strong { color: _palette(accent4); } } }
 			&.style5 { .logo { strong { color: _palette(accent5); } } }
 			&.style6 { .logo { strong { color: _palette(accent6); } } }
+			a {
+			img {
+				
+				width: 100px;
+				height:auto;}
+			}
 		}
 
 		.body.is-loading & {
@@ -150,7 +156,16 @@
 				opacity: 0;
 			}
 		}
-
+		.jump-nav {
+			ul {
+				display: flex;
+				flex-direction: row;
+				li {
+					margin: .25rem .5;
+					list-style: none;
+					font-size: 1rem;
+				}
+			}}
 		@include breakpoint(xlarge) {
 			nav {
 				a {

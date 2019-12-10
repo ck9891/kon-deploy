@@ -10,6 +10,7 @@ import Layout from '../components/layout'
 import Banner from '../components/Banner'
 import Testimonial from '../components/Testimonial'
 
+import servicebg from '../assets/images/citysquare.jpg'
 import pic01 from '../assets/images/pic01.jpg'
 import pic02 from '../assets/images/pic02.jpg'
 import pic03 from '../assets/images/pic03.jpg'
@@ -47,7 +48,7 @@ class HomeIndex extends React.Component {
                   </header>
                   <Link to="/landing" className="link primary"></Link>
                 </article>
-                <article style={{ backgroundImage: `url(${pic01})` }}>
+                <article style={{ backgroundImage: `url(${servicebg})` }}>
                  
                   
                   <Link to="/landing" className="link primary"></Link>
