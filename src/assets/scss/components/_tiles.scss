@@ -24,13 +24,13 @@
 				'filter 1s ease',
 				'-webkit-filter 1s ease'
 			));
-			@include padding(4em, 4em);
+			@include padding(2em, 2em);
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
 			cursor: default;
-			height: 40vh;
-			max-height: 40em;
+			height: 50vh;
+			max-height: 50em;
 			min-height: 23em;
 			overflow: hidden;
 			position: relative;
@@ -108,13 +108,18 @@
 			}
 
 			&:nth-child(6n - 5) {
+				p {
+					letter-spacing: normal;
+				}
 				ul {
 					display: flex;
 					flex-wrap: wrap;
-					max-width: 185px;
+					width: 100%;
 					li {
+						width:49.5%;
+						letter-spacing: normal;
 						list-style: none;
-						padding: 1rem;
+						padding: .5rem;
 					}
 				}
 				&:hover {
@@ -129,7 +134,7 @@
 				}
 				&:before {
 					
-					background-color: _palette(accent2);
+					background-color: _palette(med-grey);
 				}
 			}
 
@@ -167,9 +172,9 @@
 
 		@include breakpoint(large) {
 			article {
-				@include padding(4em, 3em);
-				height: 30vh;
-				max-height: 30em;
+				@include padding(1em, 1em);
+				height: 50vh;
+				max-height: 50em;
 				min-height: 20em;
 			}
 		}

@@ -151,6 +151,16 @@
 			}
 		}
 
+		.jump-menu {
+			ul {
+				display: flex;
+				flex-direction: row;
+				li {
+					list-style: none;
+				}
+			}
+		}
+
 		.body.is-loading & {
 			&.alt {
 				opacity: 0;

@@ -1,0 +1,12 @@
+.services-list {
+    display: flex;
+    flex-direction: row;
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width:200px;
+    }
+}

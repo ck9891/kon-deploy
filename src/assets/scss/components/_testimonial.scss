@@ -1,6 +1,21 @@
 .testimonial {
-    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 500px;
     padding: .75rem;
     margin: 1rem auto;
-    background: #efefef;
+    background: _palette(highlight);
+    color: #000000;
+}
+
+#testimonials {
+    height: 40vh;
+    max-height: 40rem;
+    min-height: 20rem;
+    padding: 2rem;
+    h3 {
+        text-align: center;
+        color: #000000;
+    }
 }

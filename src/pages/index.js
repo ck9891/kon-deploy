@@ -10,7 +10,7 @@ import Layout from '../components/layout'
 import Banner from '../components/Banner'
 import Testimonial from '../components/Testimonial'
 
-import servicebg from '../assets/images/citysquare.jpg'
+import servicesPic from '../assets/images/services.jpg'
 import pic01 from '../assets/images/pic01.jpg'
 import pic02 from '../assets/images/pic02.jpg'
 import pic03 from '../assets/images/pic03.jpg'
@@ -34,28 +34,8 @@ class HomeIndex extends React.Component {
             <Banner />
 
             <div id="main">
-              <section id="one" className="tiles">
-                
-                <article className="services">
-                  <header className="major">
-                    <h3>Services</h3>
-                    <p><ul>
-                    <li>{<FontAwesomeIcon icon={faCoffee} />}</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                  </ul></p>
-                  </header>
-                  <Link to="/landing" className="link primary"></Link>
-                </article>
-                <article style={{ backgroundImage: `url(${servicebg})` }}>
-                 
-                  
-                  <Link to="/landing" className="link primary"></Link>
-                </article>
-              </section>
-              <section id="two">
-                <div className="inner">
+                <section id="two">
+                <div className="inner" id="whoWeAre">
                   <header className="major">
                     <h2>Massa libero</h2>
                   </header>
@@ -71,7 +51,45 @@ class HomeIndex extends React.Component {
 
                 </div>
               </section>
-              <section id="three">
+              <section id="one" className="tiles">
+                
+                <article className="services" id="whatWeDo">
+                  <header className="major">
+                    <h3>Services</h3>
+                    <p className="capitalize">BORN AND RAISED IN HAMILTON, WE ARE EXPERTS IN THE LOCAL REAL ESTATE MARKET AND DEEPLY ROOTED IN THE COMMUNITY. OUR MISSION IS TO NOT ONLY FIND YOU THE RIGHT PROPERTY, BUT PLACE YOU IN THE PERFECT COMMUNITY.</p>
+                    <p><ul className="services-list">
+                    <li>
+                        <h4>Landlord and Tenant Representation</h4>
+                        {<FontAwesomeIcon icon={faCoffee} />}
+                        <p>We will represent both landlords and tenants with commercial property needs.</p>
+                    </li>
+                    <li>
+                        <h4>Investment Sales</h4>
+                        {<FontAwesomeIcon icon={faCoffee} />}
+                        <p>Help with selling your income producing real estate.</p>
+                    </li>
+                    <li>
+                        <h4>Land Acquisitions</h4>
+                        {<FontAwesomeIcon icon={faCoffee} />}
+                        <p>Planning and execution of land acquisitions and dispositions of development land.</p>
+                    </li>
+                    <li>
+                        <h4>Sale of Business</h4>
+                        {<FontAwesomeIcon icon={faCoffee} />}
+                        <p>Assistance with all aspects selling your business.</p>
+                    </li>
+                  </ul></p>
+                  </header>
+                  <Link to="/landing" className="link primary"></Link>
+                </article>
+                <article style={{ backgroundImage: `url(${servicesPic})` }}>
+                 
+                  
+                  <Link to="/landing" className="link primary"></Link>
+                </article>
+              </section>
+              
+              <section id="testimonials">
                 <h3>Testimonials</h3>
                 <Testimonial 
                 person = "John Doe"

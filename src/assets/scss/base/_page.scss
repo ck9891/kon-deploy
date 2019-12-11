@@ -6,6 +6,9 @@
 
 /* Basic */
 
+	html {
+		scroll-behavior: smooth;
+	}
 	// MSIE: Required for IEMobile.
 		@-ms-viewport {
 			width: device-width;
