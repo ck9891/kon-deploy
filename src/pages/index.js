@@ -65,7 +65,7 @@ class HomeIndex extends React.Component {
                   </header>
                   <Link to="/landing" className="link primary"></Link>
                 </article>
-                <article style={{ backgroundImage: `url(${pic01})` }}>
+                <article style={{ backgroundImage: `url(${servicesPic})` }}>
                  
                   
                   <Link to="/landing" className="link primary"></Link>
