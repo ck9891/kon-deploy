@@ -113,7 +113,7 @@
 					flex-wrap: wrap;
 					width: 100%;
 					li {
-						width:45%;
+						width:49.5%;
 						list-style: none;
 						padding: 1rem;
 					}
@@ -168,9 +168,9 @@
 
 		@include breakpoint(large) {
 			article {
-				@include padding(4em, 3em);
-				height: 30vh;
-				max-height: 30em;
+				@include padding(1em, 3em);
+				height: 50vh;
+				max-height: 50em;
 				min-height: 20em;
 			}
 		}
