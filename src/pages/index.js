@@ -38,11 +38,28 @@ class HomeIndex extends React.Component {
                 <article className="services">
                   <header className="major">
                     <h3>Services</h3>
+                    <p className="capitalize">BORN AND RAISED IN HAMILTON, WE ARE EXPERTS IN THE LOCAL REAL ESTATE MARKET AND DEEPLY ROOTED IN THE COMMUNITY. OUR MISSION IS TO NOT ONLY FIND YOU THE RIGHT PROPERTY, BUT PLACE YOU IN THE PERFECT COMMUNITY.</p>
                     <p><ul>
-                    <li>{<FontAwesomeIcon icon={faCoffee} />}</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
+                    <li>
+                        {<FontAwesomeIcon icon={faCoffee} />}
+                        <h4>Landlord and Tenant Representation</h4>
+                        <p>We will represent both landlords and tenants with commercial property needs.</p>
+                    </li>
+                    <li>
+                        <h4>Investment Sales</h4>
+                        {<FontAwesomeIcon icon={faCoffee} />}
+                        <p>Help with selling your income producing real estate.</p>
+                    </li>
+                    <li>
+                        <h4>Land Acquisitions</h4>
+                        {<FontAwesomeIcon icon={faCoffee} />}
+                        <p>Planning and execution of land acquisitions and dispositions of development land.</p>
+                    </li>
+                    <li>
+                        <h4>Sale of Business</h4>
+                        {<FontAwesomeIcon icon={faCoffee} />}
+                        <p>Assistance with all aspects selling your business.</p>
+                    </li>
                   </ul></p>
                   </header>
                   <Link to="/landing" className="link primary"></Link>
