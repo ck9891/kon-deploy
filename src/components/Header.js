@@ -11,10 +11,10 @@ const Header = (props) => (
         </Link>
         <nav className="jump-menu">
             <ul>
-                <li>Who we are</li>
-                <li>What we do</li>
-                <li>Testimonials</li>
-                <li>Get In Touch</li>
+                <li><a href="whoWeAre">Who we are</a></li>
+                <li><a href="whatWeDo">What we do</a></li>
+                <li><a href="testimonials">Testimonials</a></li>
+                <li><a href="contact">Get In Touch</a></li>
             </ul>
         </nav>
     </header>

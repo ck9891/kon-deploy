@@ -34,9 +34,26 @@ class HomeIndex extends React.Component {
             <Banner />
 
             <div id="main">
+                <section id="two">
+                <div className="inner" id="whoWeAre">
+                  <header className="major">
+                    <h2>Massa libero</h2>
+                  </header>
+                  <p>
+                    Nullam et orci eu lorem consequat tincidunt vivamus et
+                    sagittis libero. Mauris aliquet magna magna sed nunc rhoncus
+                    pharetra. Pellentesque condimentum sem. In efficitur ligula
+                    tate urna. Maecenas laoreet massa vel lacinia pellentesque
+                    lorem ipsum dolor. Nullam et orci eu lorem consequat
+                    tincidunt. Vivamus et sagittis libero. Mauris aliquet magna
+                    magna sed nunc rhoncus amet pharetra et feugiat tempus.
+                  </p>
+
+                </div>
+              </section>
               <section id="one" className="tiles">
                 
-                <article className="services">
+                <article className="services" id="whatWeDo">
                   <header className="major">
                     <h3>Services</h3>
                     <p className="capitalize">BORN AND RAISED IN HAMILTON, WE ARE EXPERTS IN THE LOCAL REAL ESTATE MARKET AND DEEPLY ROOTED IN THE COMMUNITY. OUR MISSION IS TO NOT ONLY FIND YOU THE RIGHT PROPERTY, BUT PLACE YOU IN THE PERFECT COMMUNITY.</p>
@@ -71,24 +88,8 @@ class HomeIndex extends React.Component {
                   <Link to="/landing" className="link primary"></Link>
                 </article>
               </section>
-              <section id="two">
-                <div className="inner">
-                  <header className="major">
-                    <h2>Massa libero</h2>
-                  </header>
-                  <p>
-                    Nullam et orci eu lorem consequat tincidunt vivamus et
-                    sagittis libero. Mauris aliquet magna magna sed nunc rhoncus
-                    pharetra. Pellentesque condimentum sem. In efficitur ligula
-                    tate urna. Maecenas laoreet massa vel lacinia pellentesque
-                    lorem ipsum dolor. Nullam et orci eu lorem consequat
-                    tincidunt. Vivamus et sagittis libero. Mauris aliquet magna
-                    magna sed nunc rhoncus amet pharetra et feugiat tempus.
-                  </p>
-
-                </div>
-              </section>
-              <section id="three">
+              
+              <section id="testimonials">
                 <h3>Testimonials</h3>
                 <Testimonial 
                 person = "John Doe"
