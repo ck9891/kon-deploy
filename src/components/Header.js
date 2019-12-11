@@ -7,7 +7,7 @@ import logo from '../assets/images/logo.png'
 const Header = (props) => (
     <header id="header" className="alt">
         <Link to="/" className="logo">
-            {logo}
+            <img url={logo} />
         </Link>
         <nav className="jump-menu">
             <ul>
