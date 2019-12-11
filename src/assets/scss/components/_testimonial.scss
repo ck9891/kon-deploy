@@ -1,6 +1,10 @@
 .testimonial {
-    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 500px;
     padding: .75rem;
     margin: 1rem auto;
-    background: beige;
+    background: #efefef;
+    color: #000000;
 }
