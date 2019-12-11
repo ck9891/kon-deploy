@@ -168,7 +168,7 @@
 
 		@include breakpoint(large) {
 			article {
-				@include padding(1em, 3em);
+				@include padding(1em, 1em);
 				height: 50vh;
 				max-height: 50em;
 				min-height: 20em;
