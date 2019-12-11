@@ -10,6 +10,7 @@ import Layout from '../components/layout'
 import Banner from '../components/Banner'
 import Testimonial from '../components/Testimonial'
 
+import servicesPic from '../assets/images/services.jpg'
 import pic01 from '../assets/images/pic01.jpg'
 import pic02 from '../assets/images/pic02.jpg'
 import pic03 from '../assets/images/pic03.jpg'
