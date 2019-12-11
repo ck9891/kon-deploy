@@ -111,8 +111,9 @@
 				ul {
 					display: flex;
 					flex-wrap: wrap;
-					max-width: 185px;
+					width: 100%;
 					li {
+						width:45%;
 						list-style: none;
 						padding: 1rem;
 					}
