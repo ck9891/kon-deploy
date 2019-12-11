@@ -29,8 +29,8 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			cursor: default;
-			height: 40vh;
-			max-height: 40em;
+			height: 50vh;
+			max-height: 50em;
 			min-height: 23em;
 			overflow: hidden;
 			position: relative;
@@ -130,7 +130,7 @@
 				}
 				&:before {
 					
-					background-color: _palette(accent2);
+					background-color: _palette(med-grey);
 				}
 			}
 

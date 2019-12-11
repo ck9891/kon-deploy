@@ -42,8 +42,8 @@ class HomeIndex extends React.Component {
                     <p className="capitalize">BORN AND RAISED IN HAMILTON, WE ARE EXPERTS IN THE LOCAL REAL ESTATE MARKET AND DEEPLY ROOTED IN THE COMMUNITY. OUR MISSION IS TO NOT ONLY FIND YOU THE RIGHT PROPERTY, BUT PLACE YOU IN THE PERFECT COMMUNITY.</p>
                     <p><ul className="services-list">
                     <li>
-                        {<FontAwesomeIcon icon={faCoffee} />}
                         <h4>Landlord and Tenant Representation</h4>
+                        {<FontAwesomeIcon icon={faCoffee} />}
                         <p>We will represent both landlords and tenants with commercial property needs.</p>
                     </li>
                     <li>
