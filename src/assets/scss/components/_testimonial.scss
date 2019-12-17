@@ -1,4 +1,5 @@
 .testimonial {
+    position: relative;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -7,16 +8,78 @@
     margin: 1rem auto;
     background: _palette(highlight);
     color: #000000;
-    
+    .icon-holder {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        color: #fff;
+        padding: 1.5rem;
+        background: _palette(bg);
+        border-radius: 50%;
+        margin-top: 20px;
+        height: 60px;
+        width: 60px;
+        padding: 1rem 1rem 1rem 1.2rem;
+        transition: box-shadow 500ms;
+        position: relative;
+        &:before {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            /* Create the box shadow at expanded size. */
+            box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+
+            /* Hidden by default. */
+            opacity: 0;
+            transition: opacity 500ms;
+        }
+    }
+    &:before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        /* Create the box shadow at expanded size. */
+        box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+
+        /* Hidden by default. */
+        opacity: 0;
+        transition: opacity 500ms;
+    }
+    &:hover::before {
+        /* Show the pseudo-element on hover. */
+        opacity: 1;
+        .icon-holder {
+            
+
+            &:hover::before {
+                /* Show the pseudo-element on hover. */
+                opacity: 1;
+            }
+        }
+    }
 }
 
 #testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 40vh;
     max-height: 40rem;
     min-height: 20rem;
     padding: 2rem;
     h3 {
-        text-align: center;
-        color: #000000;
+        display: inline-block;
+        padding: .5rem 1.5rem;
+        margin: 0 auto;
+        color: #fff;
+        background: _palette(bg);
     }
 }

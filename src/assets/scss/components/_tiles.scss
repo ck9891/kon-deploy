@@ -14,7 +14,20 @@
 		& + * {
 			border-top: 0 !important;
 		}
-
+		#whatWeDo {
+			width: 55%;
+			.major {
+				margin-bottom: 0;
+				ul {
+					margin-bottom: 0;
+					li {
+						p {
+							margin-bottom: 5px;
+						}
+					}
+				}
+			}
+		}
 		article {
 			@include vendor('align-items', 'center');
 			@include vendor('display', 'flex');
@@ -47,7 +60,11 @@
 
 			h3 {
 				font-size: 1.75em;
-
+				display: inline-block;
+				padding: .5rem 1.5rem;
+				margin: 0 auto;
+				color: #fff;
+				background: _palette(highlight);
 				a {
 					&:hover {
 						color: inherit !important;
@@ -104,10 +121,14 @@
 
 			&:nth-child(4n - 1),
 			&:nth-child(4n - 2) {
-				width: 60%;
+				width: 45%;
 			}
-
+			
 			&:nth-child(6n - 5) {
+				h3 {
+					width:auto;
+					margin-bottom: 10px;
+				}
 				p {
 					letter-spacing: normal;
 				}
@@ -130,11 +151,18 @@
 							background-color: #000;
 						}
 					}
+				ul {
 				
+					li {
+						h4 {
+							color: _palette(bg);
+						}
+					}
+				}
 				}
 				&:before {
 					
-					background-color: _palette(med-grey);
+					background-color: _palette(bg);
 				}
 			}
 
