@@ -2,7 +2,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import {
+  faCoffee,
+  faUserFriends,
+  faCoins,
+  faFileSignature,
+  faMoneyBill
+} from '@fortawesome/free-solid-svg-icons'
 // library.add(faEnvelope, faKey);
 
 
@@ -24,7 +30,7 @@ class HomeIndex extends React.Component {
         return (
           <Layout>
             <Helmet
-              title="KON - Test Site"
+              title="KV Realty"
               meta={[
                 { name: 'description', content: 'Sample' },
                 { name: 'keywords', content: 'sample, something' },
@@ -37,7 +43,7 @@ class HomeIndex extends React.Component {
                 <section id="two">
                 <div className="inner" id="whoWeAre">
                   <header className="major">
-                    <h2>Massa libero</h2>
+                    <h2>Who We Are</h2>
                   </header>
                   <p>
                     Nullam et orci eu lorem consequat tincidunt vivamus et
@@ -51,7 +57,7 @@ class HomeIndex extends React.Component {
 
                 </div>
               </section>
-              <section id="one" className="tiles">
+              <section id="one" className="tiles services-container" style={{ backgroundImage: `url(${servicesPic})` }}>
                 
                 <article className="services" id="whatWeDo">
                   <header className="major">
@@ -60,37 +66,32 @@ class HomeIndex extends React.Component {
                     <p><ul className="services-list">
                     <li>
                         <h4>Landlord and Tenant Representation</h4>
-                        {<FontAwesomeIcon icon={faCoffee} />}
+                        {<FontAwesomeIcon icon={faUserFriends} size="3x" />}
                         <p>We will represent both landlords and tenants with commercial property needs.</p>
                     </li>
                     <li>
                         <h4>Investment Sales</h4>
-                        {<FontAwesomeIcon icon={faCoffee} />}
+                        {<FontAwesomeIcon icon={faCoins} size="3x" />}
                         <p>Help with selling your income producing real estate.</p>
                     </li>
                     <li>
                         <h4>Land Acquisitions</h4>
-                        {<FontAwesomeIcon icon={faCoffee} />}
+                        {<FontAwesomeIcon icon={faFileSignature} size="3x" />}
                         <p>Planning and execution of land acquisitions and dispositions of development land.</p>
                     </li>
                     <li>
                         <h4>Sale of Business</h4>
-                        {<FontAwesomeIcon icon={faCoffee} />}
+                        {<FontAwesomeIcon icon={faMoneyBill} size="3x" />}
                         <p>Assistance with all aspects selling your business.</p>
                     </li>
                   </ul></p>
                   </header>
-                  <Link to="/landing" className="link primary"></Link>
                 </article>
-                <article style={{ backgroundImage: `url(${servicesPic})` }}>
-                 
-                  
-                  <Link to="/landing" className="link primary"></Link>
-                </article>
+                
               </section>
               
               <section id="testimonials">
-                <h3>Testimonials</h3>
+                <h3>Affiliations</h3>
                 <Testimonial 
                 person = "John Doe"
                 text = "lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum" 

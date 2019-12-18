@@ -27,15 +27,22 @@
 		top: 0;
 		width: 100%;
 		z-index: _misc(z-index-base);
-
+		position: sticky;
+		top: 0;
+		padding: 1rem;
+		height: 6.5rem;
+		img {
+			height: 75px;
+			width: 347px;
+		}
 		.logo {
 			border: 0;
 			display: inline-block;
 			font-size: 0.8em;
-			height: inherit;
-			line-height: inherit;
+			height: auto !important;
+			line-height: inherit !important;
 			padding: 0 1.5em;
-
+			
 			strong {
 				@include vendor('transition', (
 					'background-color #{_duration(transition)} ease-in-out',
@@ -72,16 +79,14 @@
 			a {
 				border: 0;
 				display: block;
-				font-size: 0.8em;
+				font-size: .9em;
 				height: inherit;
 				line-height: inherit;
 				padding: 0 0.75em;
 				position: relative;
 				vertical-align: middle;
 
-				&:last-child {
-					padding-right: 1.5em;
-				}
+			
 
 				&.menu-link {
 					padding-right: 3.325em !important;
@@ -133,9 +138,7 @@
 			@include vendor('transition', 'opacity #{_duration(banner)} ease');
 			@include vendor('transition-delay', '0.75s');
 			@include vendor('animation', 'none');
-			background-color: transparent;
-			box-shadow: none;
-			position: absolute;
+			
 
 			&.style1 { .logo { strong { color: _palette(accent1); } } }
 			&.style2 { .logo { strong { color: _palette(accent2); } } }
@@ -143,20 +146,23 @@
 			&.style4 { .logo { strong { color: _palette(accent4); } } }
 			&.style5 { .logo { strong { color: _palette(accent5); } } }
 			&.style6 { .logo { strong { color: _palette(accent6); } } }
-			a {
-			img {
-				
-				width: 100px;
-				height:auto;}
-			}
+			
 		}
 
 		.jump-menu {
+			height: auto;
+			    display: flex;
+			    align-items: center;
 			ul {
 				display: flex;
 				flex-direction: row;
+				margin: 0;
 				li {
 					list-style: none;
+					color: #000;
+					&:last-child {
+						border: 2px solid _palette(highlight);
+					}
 				}
 			}
 		}
@@ -174,7 +180,11 @@
 					margin: .25rem .5;
 					list-style: none;
 					font-size: 1rem;
+					&:last-child {
+						border: 2px solid _palette(highlight);
+					}
 				}
+				
 			}}
 		@include breakpoint(xlarge) {
 			nav {

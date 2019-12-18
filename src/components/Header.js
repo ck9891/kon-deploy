@@ -1,14 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-
 import logo from '../assets/images/logo.png'
 
 const Header = (props) => (
+    
     <header id="header" className="alt">
-        <Link to="/" className="logo">
             <img url={logo} />
-        </Link>
         <nav className="jump-menu">
             <ul>
                 <li><a href="#whoWeAre">Who we are</a></li>

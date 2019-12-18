@@ -42,6 +42,7 @@
 
 		h1 {
 			font-size: 3.25em;
+			margin-bottom: 0;
 			text-align: center;
 		}
 
@@ -89,9 +90,9 @@
 				}
 
 				p {
-					font-size: 0.7em;
+					font-size: 1em;
 					font-weight: _font(weight-bold);
-					letter-spacing: _font(letter-spacing-alt);
+					letter-spacing: .75px;
 					text-transform: uppercase;
 				}
 			}
