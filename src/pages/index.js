@@ -92,10 +92,10 @@ class HomeIndex extends React.Component {
               
               <section id="testimonials">
                 <h3>Affiliations</h3>
-                <Testimonial 
+                {/* <Testimonial 
                 person = "John Doe"
                 text = "lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum" 
-                />
+                /> */}
               </section>
             </div>
           </Layout>

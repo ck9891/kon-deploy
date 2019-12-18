@@ -2,9 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import logo from '../assets/images/logo.png'
 
-const Header = (props) => (
+const Header = (props) =>{
+    console.log(props)
+    return (
     
     <header id="header" className="alt">
+        <div className="logo-bg" style={{ backgroundImage: `url(${logo})` }}>
+
+        </div>
             <img url={logo} />
         <nav className="jump-menu">
             <ul>
@@ -16,7 +21,7 @@ const Header = (props) => (
         </nav>
     </header>
 )
-
+}
 Header.propTypes = {
     onToggleMenu: PropTypes.func
 }

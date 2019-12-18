@@ -26,11 +26,15 @@
 				display: flex;
 				flex-direction: column;
 				justify-content: space-evenly;
+				p {
+					font-size: 1.25rem;
+				}
 				ul {
 					margin-bottom: 0;
 					li {
 						p {
 							margin-bottom: 5px;
+							font-size: 1rem;
 						}
 					}
 				}
@@ -152,6 +156,7 @@
 					justify-content: space-evenly;
 					width: 100%;
 					li {
+						box-shadow: 1px 2px 2px rgba(0, 19, 129, 0.479);
 						width:285px;
 						letter-spacing: normal;
 						list-style: none;
@@ -159,6 +164,16 @@
 						// margin: 0 10px;
 						background: #fff;
 						font-size: .85rem;
+						text-align: center;
+						@media screen and (min-width:1500px) {
+							width:325px;
+						}
+						h4 {
+							font-size: 1.25rem;
+							font-weight:bold;
+							color: _palette(bg);
+						}
+						
 					}
 				}
 				&:hover {
@@ -169,15 +184,7 @@
 							background-color: #000;
 						}
 					}
-				ul {
 				
-					li {
-						h4 {
-							font-size: .9rem;
-							color: _palette(bg);
-						}
-					}
-				}
 				}
 				&:before {
 					opacity: .85;
