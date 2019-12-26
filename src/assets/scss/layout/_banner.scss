@@ -90,7 +90,7 @@
 				}
 
 				p {
-					font-size: 1em;
+					font-size: 1.35em;
 					font-weight: _font(weight-bold);
 					letter-spacing: .75px;
 					text-transform: uppercase;
@@ -132,7 +132,7 @@
 		}
 
 		@include breakpoint(small) {
-			@include padding(3em, 0, (2em, 0, 0, 0));
+			@include padding(2em, 0, (1em, 0, 0, 0));
 			height: auto;
 			margin-bottom: -2.75em;
 			max-height: none;
@@ -142,11 +142,16 @@
 			h1 {
 				font-size: 2em;
 			}
-
+			.content {
+				
+			}
 			> .inner {
 				.content {
 					display: block;
-
+					text-align: center;
+					p {
+						font-size: 1.15em;
+					}
 					> * {
 						margin-left: 0;
 						margin-bottom: _size(element-margin);
@@ -162,7 +167,7 @@
 		}
 
 		@include breakpoint(xsmall) {
-			@include padding(4em, 0, (2em, 0, 0, 0));
+			@include padding(2em, 0, (2em, 0, 0, 0));
 
 			> .inner {
 				.content {

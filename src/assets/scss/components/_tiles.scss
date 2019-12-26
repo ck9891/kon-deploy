@@ -8,6 +8,10 @@
 	.services-container {
 		background-position: center;
 		background-size: 112%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		
+
 	}
 	.tiles {
 		@include vendor('display', 'flex');
@@ -19,7 +23,7 @@
 		}
 		
 		#whatWeDo {
-			min-height: 70vh;
+			min-height: 90vh;
 			width: 100%;
 			.major {
 				margin-bottom: 0;
@@ -168,6 +172,9 @@
 						@media screen and (min-width:1500px) {
 							width:325px;
 						}
+						@media screen and (max-width:600px) {
+							margin: 10px 0;
+						}
 						h4 {
 							font-size: 1.25rem;
 							font-weight:bold;
@@ -242,7 +249,7 @@
 		@include breakpoint(small) {
 			article {
 				@include padding(3em, 1.5em);
-				height: 16em;
+				height:100%;
 				max-height: none;
 				min-height: 0;
 
@@ -256,7 +263,7 @@
 			display: block;
 
 			article {
-				height: 20em;
+				
 				width: 100% !important;
 			}
 		}

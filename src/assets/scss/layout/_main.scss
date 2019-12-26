@@ -11,6 +11,46 @@
 		.services {
 			color: _palette(text-colour);
 		}
+		#whoWeAre {
+			.who-we-are-body {
+				display: grid;
+				grid-template-columns: 75% 25%;
+				grid-template-rows: 1fr;
+				grid-column-gap: 10px;
+				grid-row-gap: 0px;
+				
+				@media screen and (max-width: 600px) {
+					grid-template-columns: auto;
+					grid-template-rows: 2fr;
+				}
+
+				.person-card {
+					@media screen and (max-width:600px) {
+						margin:auto;
+					}
+					.gatsby-image-wrapper {
+						max-width: 250px;
+					}
+					p {
+						background-color: _palette(highlight);
+						color: #fff;
+						text-align: center;
+						padding: 1em;
+						font-size: 1.15em;
+						@media screen and (max-width:600px) {
+							max-width: 250px;
+						}
+					}
+				}
+				p {
+					@media screen and (min-width: 768px) {
+						margin-left:5%;
+					}
+					max-width: 600px;
+					font-size: 1.15em;
+				}
+			}
+		}
 		#two {
 			h2 {
 				display: inline-block;
