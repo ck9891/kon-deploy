@@ -16,7 +16,7 @@ import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
 import servicesPic from '../assets/images/services.jpg'
-import creaLogo from '../assets/images/logo_CREA_EN.svg'
+import creaLogo from '../assets/images/logo_crea.svg'
 import oreaLogo from '../assets/images/logo-orea.svg'
 import hdaaLogo from '../assets/images/logo-hdaa.gif'
 import Affiliate from '../components/Affiliate';
