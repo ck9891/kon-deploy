@@ -16,9 +16,19 @@ import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
 import servicesPic from '../assets/images/services.jpg'
+import creaLogo from '../assets/images/logo_CREA_EN.svg'
+import oreaLogo from '../assets/images/logo-orea.svg'
+import hdaaLogo from '../assets/images/logo-hdaa.gif'
+import Affiliate from '../components/Affiliate';
 
 const HomeIndex = ({data}) => {
-
+        const affiliates = [
+          creaLogo,
+          // oreaLogo,
+          hdaaLogo,
+          data.logo4.childImageSharp.fluid.src,
+          data.logo5.childImageSharp.fluid.src,
+        ]
         return (
           <Layout>
             <Helmet
@@ -34,10 +44,13 @@ const HomeIndex = ({data}) => {
             <div id="main">
               <section id="two">
                 <div className="inner" id="whoWeAre">
-                  <header className="major">
+                  
+                  <section className="who-we-are-body">
+                   
+                  <div>
+                     <header className="major">
                     <h2>Our Approach</h2>
                   </header>
-                  <section className="who-we-are-body">
                     <p>
                       Dedicated to establishing partnerships with individuals
                       and organizations whose primary purpose is to enhance the
@@ -46,6 +59,7 @@ const HomeIndex = ({data}) => {
                       identify meaningful opportunities at an early stage or
                       that may have been overlooked previously.
                     </p>
+                    </div>
                     <div className="person-card">
                       <Img fluid={data.imageOne.childImageSharp.fluid} />
                       <p>Konstantinos Violaris</p>
@@ -105,8 +119,13 @@ const HomeIndex = ({data}) => {
                 </article>
               </section>
 
-              <section id="testimonials">
+              <section id="affiliates">
                 <h3>Affiliations</h3>
+                <div className="affiliates-row">
+                {
+                  affiliates.map((k, v)=> <Affiliate imgUrl={k} />)
+                }
+                </div>
                 {/* <Testimonial 
                 person = "John Doe"
                 text = "lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum" 
@@ -125,6 +144,7 @@ export const fluidImage = graphql`
     childImageSharp {
       fluid(maxWidth: 300) {
         ...GatsbyImageSharpFluid
+        src
       }
     }
   }
@@ -134,7 +154,13 @@ export const HEADSHOT_QUERY = graphql`
          query {
            imageOne: file(relativePath: { eq: "kv-headshot.jpg" }) {
              ...fluidImage
+           },
+           logo4:file(relativePath: { eq: "mainLogo.png" }) {
+             ...fluidImage
+           },
+           logo5:file(relativePath: { eq: "RAHB-logo_hztrans_video.png" }) {
+             ...fluidImage
            }
-           
+
          }
        `

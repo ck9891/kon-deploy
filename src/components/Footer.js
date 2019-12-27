@@ -60,7 +60,7 @@ const Footer = () => {
             </ul>
           </section>
         </div>
-        <div class="logo-holder">
+        <div className="logo-holder">
           <Img fluid={data.rlpLogo.childImageSharp.fluid} />
         </div>
       </section>

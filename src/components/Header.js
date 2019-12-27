@@ -15,7 +15,7 @@ const Header = (props) =>{
             <ul>
                 <li><a href="#whoWeAre">Our Approach</a></li>
                 <li><a href="#whatWeDo">What we do</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#affiliates">Affiliates</a></li>
                 <li><a href="#contact">Get In Touch</a></li>
             </ul>
         </nav>
