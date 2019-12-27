@@ -19,13 +19,13 @@
 				grid-column-gap: 10px;
 				grid-row-gap: 0px;
 				
-				@media screen and (max-width: 600px) {
+				@media screen and (max-width: 768px) {
 					grid-template-columns: auto;
 					grid-template-rows: 2fr;
 				}
 
 				.person-card {
-					@media screen and (max-width:600px) {
+					@media screen and (max-width:768px) {
 						margin:auto;
 					}
 					.gatsby-image-wrapper {
@@ -37,7 +37,7 @@
 						text-align: center;
 						padding: 1em;
 						font-size: 1.15em;
-						@media screen and (max-width:600px) {
+						@media screen and (max-width:768px) {
 							max-width: 250px;
 						}
 					}
@@ -46,7 +46,7 @@
 					@media screen and (min-width: 768px) {
 						margin-left:5%;
 					}
-					max-width: 600px;
+					max-width: 768px;
 					font-size: 1.15em;
 				}
 			}

@@ -131,9 +131,10 @@ export const fluidImage = graphql`
 `;
 
 export const HEADSHOT_QUERY = graphql`
-query {
-    imageOne: file(relativePath: { eq: "kv-headshot.jpg" }) {
-      ...fluidImage
-    }
-}
-`;
+         query {
+           imageOne: file(relativePath: { eq: "kv-headshot.jpg" }) {
+             ...fluidImage
+           }
+           
+         }
+       `

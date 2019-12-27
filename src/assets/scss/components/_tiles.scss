@@ -172,7 +172,7 @@
 						@media screen and (min-width:1500px) {
 							width:325px;
 						}
-						@media screen and (max-width:600px) {
+						@media screen and (max-width:768px) {
 							margin: 10px 0;
 						}
 						h4 {
@@ -242,7 +242,7 @@
 
 		@include breakpoint(medium) {
 			article {
-				width: 50% !important;
+				width: 100% !important;
 			}
 		}
 

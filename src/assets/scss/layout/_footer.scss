@@ -7,6 +7,17 @@
 /* Footer */
 
 	#footer {
+			.logo-holder {
+				width: 100%;
+				height: auto;
+				background-color: #fff;
+				padding:1em;
+				.gatsby-image-wrapper {
+					width: 250px;
+					margin: 0 auto;
+				}
+			}
+		
 		.copyright {
 			font-size: 0.8em;
 			list-style: none;

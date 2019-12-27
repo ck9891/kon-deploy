@@ -1,9 +1,19 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-const Footer = ({data}) => {
-console.log(data)
+const Footer = () => {
+    const data = useStaticQuery(graphql`
+      query {
+        rlpLogo: file(relativePath: { eq: "rlp-logo.jpg" }) {
+          childImageSharp {
+            fluid( grayscale: true) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `)
   return (
     <footer id="footer">
       <section id="contact">
@@ -21,9 +31,6 @@ console.log(data)
                     <span className="label">LinkedIn</span>
                   </a>
                 </li>
-              </ul>
-              <ul className="copyright">
-                <li>&copy; Cameron Farquharson</li>
               </ul>
             </div>
             <div className="contact-method">
@@ -48,26 +55,18 @@ console.log(data)
               <h3>Phone</h3>
               <span>(000) 000-0000 x12387</span>
             </div>
+            <ul className="copyright">
+              <li>&copy; Cameron Farquharson</li>
+            </ul>
           </section>
         </div>
-        {/* <Img fluid={data.childImageSharp.fluid} /> */}
+        <div class="logo-holder">
+          <Img fluid={data.rlpLogo.childImageSharp.fluid} />
+        </div>
       </section>
-      <pre>{JSON.stringify(data, null, 4)}</pre>
     </footer>
   )
 
 
 }
 export default Footer
-
-export const LEPAGE_QUERY = graphql`
-         query MyQuery {
-           file(relativePath: { eq: "kv-headshot.jpg" }) {
-             childImageSharp {
-               fluid {
-                 src
-               }
-             }
-           }
-         }
-       `
