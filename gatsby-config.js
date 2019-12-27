@@ -2,9 +2,9 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter - Forty V2',
-    author: 'Hunter Chang',
-    description: 'A Gatsby.js V2 Starter based on Forty by HTML5 UP',
+    title: 'KV Real Estate',
+    author: 'Hunter Chang, Cameorn Farquharosn',
+    description: 'A Gatsby.js V2 site for KV Real Eastate',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -14,10 +14,10 @@ module.exports = {
         name: 'gatsby-starter-default',
         short_name: 'starter',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#fff',
+        theme_color: '#fff',
         display: 'minimal-ui',
-        icon: 'src/assets/images/website-icon.png', // This path is relative to the root of the site.
+        icon: 'src/assets/images/logo.png', // This path is relative to the root of the site.
       },
     },
     {
