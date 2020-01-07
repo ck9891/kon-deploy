@@ -49,7 +49,7 @@ const HomeIndex = ({data}) => {
                    
                   <div>
                      <header className="major">
-                    <h2>Our Approach</h2>
+                    <h2>Our Ethos</h2>
                   </header>
                     <p>
                       Dedicated to establishing partnerships with individuals
@@ -74,7 +74,7 @@ const HomeIndex = ({data}) => {
               >
                 <article className="services" id="whatWeDo">
                   <header className="major">
-                    <h3>Services</h3>
+                    <h3>What We Do</h3>
                     <p className="capitalize">
                       BORN AND RAISED IN HAMILTON, WE ARE EXPERTS IN THE LOCAL
                       REAL ESTATE MARKET AND DEEPLY ROOTED IN THE COMMUNITY. OUR
@@ -120,7 +120,7 @@ const HomeIndex = ({data}) => {
               </section>
 
               <section id="affiliates">
-                <h3>Affiliations</h3>
+                <h3>Testimonials</h3>
                 <div className="affiliates-row">
                 {
                   affiliates.map((k, v)=> <Affiliate imgUrl={k} />)

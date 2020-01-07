@@ -1,0 +1,41 @@
+
+#contactPage {
+    background: #fff;
+}
+
+#contactUs {
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h2{
+        margin: .5rem auto;
+        color: #333;
+        font-weight: bold;
+    }
+    #contactForm {
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+        label {
+            color: #333;
+        }
+        input{
+            border: 1px dotted #333;
+        } 
+        
+        textarea {
+            border: 1px dotted #333;
+            height: 16rem;
+        }
+        #getInTouch {
+            margin-top: 1rem;
+            border: 2px solid #333;
+            color: #333;
+            &:hover {
+                color: _palette(highlight);
+                 border: 2px solid _palette(highlight);
+            }
+        }
+    }
+}

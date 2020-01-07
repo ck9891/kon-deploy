@@ -25,40 +25,51 @@
 				}
 
 				.person-card {
-					@media screen and (max-width:768px) {
-						margin:auto;
-					}
-					.gatsby-image-wrapper {
-						max-width: 250px;
-					}
 					p {
 						background-color: _palette(highlight);
 						color: #fff;
 						text-align: center;
 						padding: 1em;
 						font-size: 1.15em;
-						margin-left:0;
-						@media screen and (max-width:768px) {
-							max-width: 250px;
-						}
+						margin-left: 0;
+						max-width: 350px;
+						margin: 0 auto;
+					}
+					.gatsby-image-wrapper {
+						max-width: 350px;
+						margin: 0 auto;
+					}
+					@media screen and (max-width:768px) {
+						margin:auto;
+					
+					.gatsby-image-wrapper {
+						max-width: 250px;
+						margin: 0 auto;
+					}
+					p {
+						background-color: _palette(highlight);
+						
+						max-width: 250px;
+						
+					}
 					}
 				}
 				p {
 					@media screen and (min-width: 768px) {
-						margin-left:5%;
+						max-width: 900px;
+						font-size: 1.15em;
 					}
-					max-width: 768px;
-					font-size: 1.15em;
 				}
 			}
 		}
 		#two {
 			h2 {
 				display: inline-block;
-				padding: .5rem 1.5rem;
+				padding: 0;
 				margin: 0 auto;
-				color: #fff;
-				background: _palette(bg);
+				color: #333;
+				font-weight: bold;
+				// background: _palette(bg);
 			}
 			.inner {
 				p {

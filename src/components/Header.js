@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {Link} from 'gatsby'
 import logo from '../assets/images/logo.png'
 
 const Header = (props) =>{
@@ -13,10 +14,10 @@ const Header = (props) =>{
             <img url={logo} />
         <nav className="jump-menu">
             <ul>
-                <li><a href="#whoWeAre">Our Approach</a></li>
+                <li><a href="#whoWeAre">Our Ethos</a></li>
                 <li><a href="#whatWeDo">What we do</a></li>
-                <li><a href="#affiliates">Affiliates</a></li>
-                <li><a href="#contact">Get In Touch</a></li>
+                <li><a href="#affiliates">Testimonials</a></li>
+                <li><Link to="/contact">Get In Touch</Link></li>
             </ul>
         </nav>
     </header>
