@@ -10,8 +10,8 @@ const Testimonial = (props) => {
                 <FontAwesomeIcon icon={faUser} size="lg" />
             </div>
             <div className="testimonial-body">
-                <blockquote>{props.text}</blockquote>
                 <p>{props.person}</p>
+                <blockquote>{props.text}</blockquote>
             </div>
         </div>
     )

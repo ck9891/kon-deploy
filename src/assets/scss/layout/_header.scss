@@ -11,10 +11,33 @@
 		100% { top: 0; opacity: 1; }
 	}
 
+	#preHeader {
+		@include vendor('display', 'flex');
+		justify-content: flex-start;
+		width: 100%;
+		background: #333;
+		padding: .5rem;
+		.contact-method{
+			// width: 250px;
+			display: flex;
+			align-items: center;
+			font-size: .8rem;
+			margin:0;
+			margin-left:2rem;
+			h3 {
+				font-size:.9rem;
+				margin:0;
+			}
+		}
+		@media screen and (max-width:450px) {
+			display:none;
+		}
+	}
+
 	#header {
 		@include vendor('display', 'flex');
 		align-items: center;
-		background-color: _palette(bg-alt);
+		background-color: rgba($color: #fff, $alpha: 0.9);
 		box-shadow: 0 0 0.25em 0 rgba(0,0,0,0.15);
 		cursor: default;
 		font-weight: _font(weight-bold);

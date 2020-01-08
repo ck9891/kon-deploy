@@ -3,17 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 const Footer = () => {
-    const data = useStaticQuery(graphql`
-      query {
-        rlpLogo: file(relativePath: { eq: "rlp-logo.jpg" }) {
-          childImageSharp {
-            fluid( grayscale: true) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `)
+    
   return (
     <footer id="footer">
       <section id="contact">
@@ -37,31 +27,26 @@ const Footer = () => {
               <span className="icon alt fa-home"></span>
               <h3>Address</h3>
               <span>
-                1234 Somewhere Road #5432
-                <br />
-                Hamilton, ON Canada
-                <br />
-                A8C1B4
+                987 Rymal Road East<br />
+                Hamilton, Ontario, Canada<br />
+                L8W 3M2
               </span>
             </div>
 
             <div className="contact-method">
               <span className="icon alt fa-envelope"></span>
               <h3>Email</h3>
-              <a href="#">email@email.com</a>
+              <a href="mailto:kviolaris@royallepage.ca">kviolaris@royallepage.ca</a>
             </div>
             <div className="contact-method">
               <span className="icon alt fa-phone"></span>
               <h3>Phone</h3>
-              <span>(000) 000-0000 x12387</span>
+              <span><a href="tel:(905) 906-4131">(905) 906-4131</a></span>
             </div>
             <ul className="copyright">
               <li>&copy; Cameron Farquharson</li>
             </ul>
           </section>
-        </div>
-        <div className="logo-holder">
-          <Img fluid={data.rlpLogo.childImageSharp.fluid} />
         </div>
       </section>
     </footer>

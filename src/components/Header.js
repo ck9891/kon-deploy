@@ -6,7 +6,26 @@ import logo from '../assets/images/logo.png'
 const Header = (props) =>{
     console.log(props)
     return (
-    
+    <>
+    <header id="preHeader">
+        <div className="contact-method address">
+              <span className="icon alt fa-home"></span>
+              <h3>Address:&nbsp;</h3>
+              <span>
+                987 Rymal Road East, Hamilton, Ontario, Canada, L8W 3 M2
+              </span>
+            </div>
+        <div className="contact-method">
+              <span className="icon alt fa-envelope"></span>
+              <h3>Email:&nbsp;</h3>
+              <a href="mailto:kviolaris@royallepage.ca">kviolaris@royallepage.ca</a>
+            </div>
+            <div className="contact-method">
+              <span className="icon alt fa-phone"></span>
+              <h3>Phone:&nbsp;</h3>
+              <span><a href="tel:(905) 906-4131">(905) 906-4131</a></span>
+            </div>
+    </header>
     <header id="header" className="alt">
         <div className="logo-bg" style={{ backgroundImage: `url(${logo})` }}>
 
@@ -21,6 +40,7 @@ const Header = (props) =>{
             </ul>
         </nav>
     </header>
+    </>
 )
 }
 Header.propTypes = {

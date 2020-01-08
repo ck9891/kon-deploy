@@ -19,7 +19,7 @@ import servicesPic from '../assets/images/services.jpg'
 import creaLogo from '../assets/images/logo_crea.svg'
 import oreaLogo from '../assets/images/logo-orea.svg'
 import hdaaLogo from '../assets/images/logo-hdaa.gif'
-import Affiliate from '../components/Affiliate';
+import Testimonial from '../components/Testimonial';
 
 const HomeIndex = ({data}) => {
         const affiliates = [
@@ -119,17 +119,18 @@ const HomeIndex = ({data}) => {
                 </article>
               </section>
 
-              <section id="affiliates">
+              <section id="testimonials">
                 <h3>Testimonials</h3>
-                <div className="affiliates-row">
-                {
+                <div className="testimonial-row">
+                   <Testimonial
+                   person = "MRKT Collective"
+                   text = "lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum"
+                   />
+                {/* {
                   affiliates.map((k, v)=> <Affiliate imgUrl={k} />)
-                }
+                } */}
                 </div>
-                {/* <Testimonial 
-                person = "John Doe"
-                text = "lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum" 
-                /> */}
+               
               </section>
             </div>
           </Layout>
