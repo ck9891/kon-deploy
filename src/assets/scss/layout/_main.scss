@@ -23,7 +23,30 @@
 					grid-template-columns: auto;
 					grid-template-rows: 2fr;
 				}
-
+				header {
+					margin-bottom:2rem;
+				}
+				.dictionary {
+					background: #f1f0f0;
+					font-size:1.2rem;
+					dl {
+						dt {
+							font-size: 1.25em;
+							font-weight: bolder;
+							color: _palette(bg);
+							border-bottom: 1px dotted #ccc;
+							width: 300px;
+						}
+						dd {
+							margin-left:.75rem;
+						}
+						margin-bottom: 0;
+					}
+					color: #000;
+					max-width:650px;
+					padding: 1rem;
+					margin-bottom: 2rem;
+				}
 				.person-card {
 					p {
 						background-color: _palette(highlight);

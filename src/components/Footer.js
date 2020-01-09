@@ -43,12 +43,15 @@ const Footer = () => {
               <h3>Phone</h3>
               <span><a href="tel:(905) 906-4131">(905) 906-4131</a></span>
             </div>
-            <ul className="copyright">
-              <li>&copy; Cameron Farquharson</li>
-            </ul>
+            
           </section>
+          
         </div>
+        
       </section>
+      <ul className="copyright">
+        <li>&copy; Cameron Farquharson</li>
+      </ul>
     </footer>
   )
 

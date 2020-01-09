@@ -9,7 +9,9 @@
 	#contact {
 		border-bottom: solid 1px _palette(border);
 		overflow-x: hidden;
-
+		a {
+			padding-bottom:.25rem;
+		}
 		> .inner {
 			@include vendor('display', 'flex');
 			padding: 0 !important;

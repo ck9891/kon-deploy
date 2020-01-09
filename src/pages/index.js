@@ -48,9 +48,17 @@ const HomeIndex = ({data}) => {
                   <section className="who-we-are-body">
                    
                   <div>
-                     <header className="major">
-                    <h2>Our Ethos</h2>
-                  </header>
+                    <header className="major">
+                      <h2>Our Ethos</h2>
+                    </header>
+                    <div className="dictionary">
+                      <dl>
+                        <dt>Definition of ethos <small>\ ˈē-ˌthäs  \</small></dt>
+                        <dd>
+                          The distinguishing character, sentiment, moral nature, or guiding beliefs of a person, group, or institution
+                        </dd>
+                      </dl>
+                    </div>
                     <p>
                       Dedicated to establishing partnerships with individuals
                       and organizations whose primary purpose is to enhance the
@@ -76,12 +84,15 @@ const HomeIndex = ({data}) => {
                   <header className="major">
                     <h3>What We Do</h3>
                     <p className="capitalize">
-                      BORN AND RAISED IN HAMILTON, WE ARE EXPERTS IN THE LOCAL
-                      REAL ESTATE MARKET AND DEEPLY ROOTED IN THE COMMUNITY. OUR
-                      MISSION IS TO NOT ONLY FIND YOU THE RIGHT PROPERTY, BUT
-                      PLACE YOU IN THE PERFECT COMMUNITY.
+                      Born and raised in Hamilton, I am an expert in the local real estate market and deeply 
+                      rooted in the community. My mission is to not only find you the right property, but place you
+                      in the perfect community. My expertise in the culture of the area allows me to understand you
+                      as a tenant or landlord and make sure you are properly <span>represented</span>. In such a busy market
+                      I want to make sure your income properties get you the value you deserve and that you can continue acquiring
+                      <span> more investments </span>, pain free. If you are looking to <span>sell your business</span> , I will make sure the
+                      right buyer takes on your business so that you can enjoy your next adventure worry free.
                     </p>
-                    <p>
+                    {/* <p>
                       <ul className="services-list">
                         <li>
                           <h4>Landlord and Tenant Representation</h4>
@@ -114,7 +125,7 @@ const HomeIndex = ({data}) => {
                           </p>
                         </li>
                       </ul>
-                    </p>
+                    </p> */}
                   </header>
                 </article>
               </section>
