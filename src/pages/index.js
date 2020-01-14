@@ -2,13 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faUserFriends,
-  faCoins,
-  faFileSignature,
-  faMoneyBill
-} from '@fortawesome/free-solid-svg-icons'
+import ReactTooltip from 'react-tooltip'
 // library.add(faEnvelope, faKey);
 
 
@@ -49,7 +43,7 @@ const HomeIndex = ({data}) => {
                    
                   <div>
                     <header className="major">
-                      <h2>Our Ethos</h2>
+                      <h2>ETHOS</h2>
                     </header>
                     <div className="dictionary">
                       <dl>
@@ -59,14 +53,6 @@ const HomeIndex = ({data}) => {
                         </dd>
                       </dl>
                     </div>
-                    <p>
-                      Dedicated to establishing partnerships with individuals
-                      and organizations whose primary purpose is to enhance the
-                      communities they do business in. Particularly interested
-                      in researching and analyzing real estate markets to
-                      identify meaningful opportunities at an early stage or
-                      that may have been overlooked previously.
-                    </p>
                     </div>
                     <div className="person-card">
                       <Img fluid={data.imageOne.childImageSharp.fluid} />
@@ -84,6 +70,18 @@ const HomeIndex = ({data}) => {
                   <header className="major">
                     <h3>What We Do</h3>
                     <p className="capitalize">
+                      Dedicated to establishing partnerships with individuals
+                      and organizations whose primary purpose is to enhance the
+                      communities they do business in. Particularly interested
+                      in researching and analyzing real estate markets to
+                      identify meaningful opportunities at an early stage or
+                      that may have been overlooked previously.
+                      {/* <span data-tip data-for="test">Tooltip</span>
+                      <ReactTooltip id='test' type='error'>
+                        <span>Show happy face</span>
+                      </ReactTooltip> */}
+                    </p>
+                    {/* <p className="capitalize">
                       Born and raised in Hamilton, I am an expert in the local real estate market and deeply 
                       rooted in the community. My mission is to not only find you the right property, but place you
                       in the perfect community. My expertise in the culture of the area allows me to understand you
@@ -91,7 +89,7 @@ const HomeIndex = ({data}) => {
                       I want to make sure your income properties get you the value you deserve and that you can continue acquiring
                       <span> more investments </span>, pain free. If you are looking to <span>sell your business</span> , I will make sure the
                       right buyer takes on your business so that you can enjoy your next adventure worry free.
-                    </p>
+                    </p> */}
                     {/* <p>
                       <ul className="services-list">
                         <li>

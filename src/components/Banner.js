@@ -7,7 +7,7 @@ const Banner = (props) => (
                 <h1>KV Real Estate</h1>
             </header>
             <div className="content">
-                <p>Your Creditable source for commercial real estate in Hamilton.</p>
+                <p>Focused Energy That Drives Results</p>
                 
                 <ul className="actions">
                     <li><a href="#one" className="button scrolly">Get in Touch</a></li>

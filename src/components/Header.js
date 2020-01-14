@@ -4,7 +4,6 @@ import {Link} from 'gatsby'
 import logo from '../assets/images/logo.png'
 
 const Header = (props) =>{
-    console.log(props)
     return (
     <>
     <header id="preHeader">
@@ -12,13 +11,13 @@ const Header = (props) =>{
               <span className="icon alt fa-home"></span>
               <h3>Address:&nbsp;</h3>
               <span>
-                987 Rymal Road East, Hamilton, Ontario, Canada, L8W 3 M2
+                270 Sherman Ave N, Hamilton, ON L8L 6 N4 Suite #301
               </span>
             </div>
         <div className="contact-method">
               <span className="icon alt fa-envelope"></span>
               <h3>Email:&nbsp;</h3>
-              <a href="mailto:kviolaris@royallepage.ca">kviolaris@royallepage.ca</a>
+              <a href="mailto:violaris@kvrealestate.ca">violaris@kvrealestate.ca</a>
             </div>
             <div className="contact-method">
               <span className="icon alt fa-phone"></span>
@@ -33,7 +32,7 @@ const Header = (props) =>{
             <img url={logo} />
         <nav className="jump-menu">
             <ul>
-                <li><a href="#whoWeAre">Our Ethos</a></li>
+                <li><a href="#whoWeAre">Ethos</a></li>
                 <li><a href="#whatWeDo">What we do</a></li>
                 <li><a href="#affiliates">Testimonials</a></li>
                 <li><Link to="/contact">Get In Touch</Link></li>

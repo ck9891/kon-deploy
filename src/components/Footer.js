@@ -12,12 +12,12 @@ const Footer = () => {
             <div className="inner">
               <ul className="icons">
                 <li>
-                  <a href="#" className="icon alt fa-instagram">
+                  <a href="https://www.instagram.com/kvgrouphamilton/" target="_blank" rel="noopener noreferrer" className="icon alt fa-instagram">
                     <span className="label">Instagram</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="icon alt fa-linkedin">
+                  <a href="https://www.linkedin.com/in/konstantinos-violaris/" target="_blank" rel="noopener noreferrer" className="icon alt fa-linkedin">
                     <span className="label">LinkedIn</span>
                   </a>
                 </li>
@@ -27,16 +27,16 @@ const Footer = () => {
               <span className="icon alt fa-home"></span>
               <h3>Address</h3>
               <span>
-                987 Rymal Road East<br />
-                Hamilton, Ontario, Canada<br />
-                L8W 3M2
+                270 Sherman Ave N Suite #301<br />
+                Hamilton, ON<br />
+                L8L 6N4 <br />
               </span>
             </div>
 
             <div className="contact-method">
               <span className="icon alt fa-envelope"></span>
               <h3>Email</h3>
-              <a href="mailto:kviolaris@royallepage.ca">kviolaris@royallepage.ca</a>
+              <a href="mailto:violaris@kvrealestate.ca">violaris@kvrealestate.ca</a>
             </div>
             <div className="contact-method">
               <span className="icon alt fa-phone"></span>

@@ -13,15 +13,11 @@
 		}
 		#whoWeAre {
 			.who-we-are-body {
-				display: grid;
-				grid-template-columns: 75% 25%;
-				grid-template-rows: 1fr;
-				grid-column-gap: 10px;
-				grid-row-gap: 0px;
+				display: flex;
+				justify-content: space-around;
 				
 				@media screen and (max-width: 768px) {
-					grid-template-columns: auto;
-					grid-template-rows: 2fr;
+					flex-direction: column;
 				}
 				header {
 					margin-bottom:2rem;
@@ -53,13 +49,13 @@
 						color: #fff;
 						text-align: center;
 						padding: 1em;
-						font-size: 1.15em;
+						font-size: 1em;
 						margin-left: 0;
-						max-width: 350px;
+						max-width: 300px;
 						margin: 0 auto;
 					}
 					.gatsby-image-wrapper {
-						max-width: 350px;
+						max-width: 300px;
 						margin: 0 auto;
 					}
 					@media screen and (max-width:768px) {
@@ -92,7 +88,7 @@
 				margin: 0 auto;
 				color: #333;
 				font-weight: bold;
-				// background: _palette(bg);
+				text-transform: uppercase;
 			}
 			.inner {
 				p {
