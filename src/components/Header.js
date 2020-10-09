@@ -32,9 +32,9 @@ const Header = (props) =>{
             <img url={logo} />
         <nav className="jump-menu">
             <ul>
-                <li><a href="#whoWeAre">Ethos</a></li>
-                <li><a href="#whatWeDo">What we do</a></li>
-                <li><a href="#affiliates">Testimonials</a></li>
+                <li><a href="#whoWeAre">Our Approach</a></li>
+                <li><a href="#whatWeDo">Services</a></li>
+                <li><a href="#affiliates">Affiliates</a></li>
                 <li><Link to="/contact">Get In Touch</Link></li>
             </ul>
         </nav>

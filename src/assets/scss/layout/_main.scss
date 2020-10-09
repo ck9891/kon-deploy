@@ -6,108 +6,174 @@
 
 /* Main */
 
-	#main {
-		background-color: _palette(bg-alt);
-		.services {
-			color: _palette(text-colour);
-		}
-		#whoWeAre {
-			.who-we-are-body {
-				display: flex;
-				justify-content: space-around;
-				
-				@media screen and (max-width: 768px) {
-					flex-direction: column;
-				}
-				header {
-					margin-bottom:2rem;
-				}
-				.dictionary {
-					background: #f1f0f0;
-					font-size:1.2rem;
-					dl {
-						dt {
-							font-size: 1.25em;
-							font-weight: bolder;
-							color: _palette(bg);
-							border-bottom: 1px dotted #ccc;
-							width: 300px;
-						}
-						dd {
-							margin-left:.75rem;
-						}
-						margin-bottom: 0;
-					}
-					color: #000;
-					max-width:650px;
-					padding: 1rem;
-					margin-bottom: 2rem;
-				}
-				.person-card {
-					p {
-						background-color: _palette(highlight);
-						color: #fff;
-						text-align: center;
-						padding: 1em;
-						font-size: 1em;
-						margin-left: 0;
-						max-width: 300px;
-						margin: 0 auto;
-					}
-					.gatsby-image-wrapper {
-						max-width: 300px;
-						margin: 0 auto;
-					}
-					@media screen and (max-width:768px) {
-						margin:auto;
-					
-					.gatsby-image-wrapper {
-						max-width: 250px;
-						margin: 0 auto;
-					}
-					p {
-						background-color: _palette(highlight);
-						
-						max-width: 250px;
-						
-					}
-					}
-				}
-				p {
-					@media screen and (min-width: 768px) {
-						max-width: 900px;
-						font-size: 1.15em;
-					}
-				}
-			}
-		}
-		#two {
-			h2 {
-				display: inline-block;
-				padding: 0;
-				margin: 0 auto;
-				color: #333;
-				font-weight: bold;
-				text-transform: uppercase;
-			}
-			.inner {
-				p {
-				color: _palette(text-colour);
-				}
-			}
-		}
-		> * {
-			border-top: solid 1px _palette(border);
+#main {
+  background-color: _palette(bg-alt);
 
-			&:first-child {
-				border-top: 0;
-			}
+  .services {
+    color: _palette(text-colour);
+    display: flex;
+    flex-direction: column;
+    .col__1 {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
 
-			@include inner;
-		}
+      color: #fff;
+      position: relative;
+      width: 100%;
+      @media (min-width: 1000px) {
+        width: 50%;
+      }
+      p,
+      h3 {
+        position: relative;
+        z-index: 100;
+      }
+      h3 {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      p {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .col__2 {
+      width: 100%;
+      @media (min-width: 1000px) {
+        width: 50%;
+      }
+      &.major {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 75vh;
+      }
+    }
+    @media (min-width: 1000px) {
+      flex-direction: row;
+    }
+  }
+  #whoWeAre {
+    .who-we-are-body {
+      display: flex;
+      justify-content: space-around;
 
-		&.alt {
-			background-color: transparent;
-			border-bottom: solid 1px _palette(border);
-		}
-	}
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+      header {
+        margin-bottom: 2rem;
+      }
+      .dictionary {
+        background: #f1f0f0;
+        font-size: 1.2rem;
+        dl {
+          dt {
+            font-size: 1.25em;
+            font-weight: bolder;
+            color: _palette(bg);
+            border-bottom: 1px dotted #ccc;
+            width: 300px;
+          }
+          dd {
+            margin-left: 0.75rem;
+          }
+          margin-bottom: 0;
+        }
+        color: #000;
+        max-width: 650px;
+        padding: 1rem;
+        margin-bottom: 2rem;
+      }
+      .person-card {
+        position: relative;
+        z-index: 10;
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.25);
+        padding: 1rem;
+        p {
+          color: #000;
+          font-weight: 600;
+          text-align: center;
+          padding: 0 1em;
+          font-size: 1em;
+          margin-left: 0;
+          max-width: 300px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 10;
+          margin-bottom: 0;
+          &:after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            bottom: -2px;
+            left: 10px;
+            width: 100%;
+            height: 2px;
+            background-color: _palette(highlight);
+          }
+        }
+        .gatsby-image-wrapper {
+          max-width: 300px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 100;
+        }
+        @media screen and (max-width: 768px) {
+          margin: auto;
+
+          .gatsby-image-wrapper {
+            max-width: 250px;
+            margin: 0 auto;
+          }
+          p {
+            background-color: _palette(highlight);
+
+            max-width: 250px;
+          }
+        }
+      }
+      p {
+        @media screen and (min-width: 768px) {
+          max-width: 900px;
+          padding-right: 50px;
+          font-size: 1.15em;
+        }
+        @media screen and (min-width: 1200px) {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+  #two {
+    h2 {
+      display: inline-block;
+      padding: 0;
+      margin: 0 auto;
+      color: #333;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .inner {
+      p {
+        color: _palette(text-colour);
+      }
+    }
+  }
+  > * {
+    border-top: solid 1px _palette(border);
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    @include inner;
+  }
+
+  &.alt {
+    background-color: transparent;
+    border-bottom: solid 1px _palette(border);
+  }
+}

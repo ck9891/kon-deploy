@@ -5,387 +5,400 @@
 ///
 
 /* Tiles */
-	.services-container {
-		background-position: center;
-		background-size: 112%;
-		background-size: cover;
-		background-repeat: no-repeat;
-
-	}
-	.tiles {
-		@include vendor('display', 'flex');
-		@include vendor('flex-wrap', 'wrap');
-		border-top: 0 !important;
-
-		& + * {
-			border-top: 0 !important;
-		}
-		
-		#whatWeDo {
-			width: 100%;
-			padding: 2rem;
-			height:auto;
-			.major {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-evenly;
-				margin-bottom:0;
-				p {
-					font-size: 1.5rem !important;
-					margin-bottom:0;
-					.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+.services-container {
+  min-height: 75vh;
+  background-position: center;
+  background-size: 112%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+.tiles {
+  @include vendor('display', 'flex');
+  @include vendor('flex-wrap', 'wrap');
+  border-top: 0 !important;
 
-/* The actual popup (appears on top) */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
+  & + * {
+    border-top: 0 !important;
+  }
+
+  #whatWeDo {
+    width: 100%;
+    padding: 2rem;
+    height: auto;
+    position: relative;
+    background-position: center;
+    background-size: 112%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.85;
+      background-color: #0770b9;
+    }
+    .major {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-bottom: 0;
+      p {
+        font-size: 1.5rem !important;
+        margin-bottom: 0;
+        .popup {
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+        }
+
+        /* The actual popup (appears on top) */
+        .popup .popuptext {
+          visibility: hidden;
+          width: 160px;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 8px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 125%;
+          left: 50%;
+          margin-left: -80px;
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+
+        /* Toggle this class when clicking on the popup container (hide and show the popup) */
+        .popup .show {
+          visibility: visible;
+          -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        .popup {
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+        }
+
+        /* The actual popup (appears on top) */
+        .popup .popuptext {
+          visibility: hidden;
+          width: 160px;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 8px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 125%;
+          left: 50%;
+          margin-left: -80px;
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+
+        /* Toggle this class when clicking on the popup container (hide and show the popup) */
+        .popup .show {
+          visibility: visible;
+          -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 1;
+          }
+        }
+      }
+      ul {
+        margin-bottom: 0;
+        li {
+          p {
+            margin-bottom: 5px;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  article {
+    @include vendor('align-items', 'center');
+    @include vendor('display', 'flex');
+    @include vendor(
+      'transition',
+      (
+        'transform 0.25s ease',
+        'opacity 0.25s ease',
+        'filter 1s ease',
+        '-webkit-filter 1s ease'
+      )
+    );
+    @include padding(2em, 2em);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: default;
+    height: 50vh;
+    max-height: 50em;
+    min-height: 23em;
+    overflow: hidden;
+    position: relative;
+    width: 40%;
+
+    .image {
+      display: none;
+    }
+
+    header {
+      position: relative;
+      z-index: 3;
+    }
+
+    h3 {
+      font-size: 1.75em;
+      display: inline-block;
+      padding: 0.5rem 0 0.25rem;
+      margin: 0 auto;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .link.primary {
+      border: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 4;
+    }
+
+    &:before {
+      @include vendor('transition', 'opacity 0.5s ease');
+      bottom: 0;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 0.85;
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+    }
+
+    &:after {
+      background-color: transparentize(_palette(med-grey), 0.75);
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 0;
+      }
+    }
+
+    &.is-transitioning {
+      @include vendor('transform', 'scale(0.95)');
+      @include vendor('filter', 'blur(0.5em)');
+      opacity: 0;
+    }
+
+    &:nth-child(6n - 5) {
+      h3 {
+        width: auto;
+        margin-bottom: 10px;
+      }
+      p {
+        margin: 1rem 0 1.5rem;
+        letter-spacing: normal;
+      }
+      .capitalize {
+        color: #fff;
+        font-size: 1rem;
+        text-align: center;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        span {
+          font-size: 1.5rem;
+          font-weight: bolder;
+          transition: all 200ms;
+          &:hover {
+            cursor: pointer;
+            color: _palette(accent2);
+          }
+        }
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        li {
+          box-shadow: 1px 2px 2px rgba(0, 19, 129, 0.479);
+          width: 285px;
+          letter-spacing: normal;
+          // list-style: none;
+          padding: 0.75rem;
+          // margin: 0 10px;
+          background: #fff;
+          font-size: 0.85rem;
+          text-align: center;
+          @media screen and (min-width: 1500px) {
+            width: 325px;
+          }
+          @media screen and (max-width: 768px) {
+            margin: 10px 0;
+          }
+          h4 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: _palette(bg);
+          }
+        }
+      }
+      &:hover {
+        h3 {
+          // color: #000;
+          &:after {
+            background-color: #000;
+          }
+        }
+      }
+    }
+
+    &:nth-child(6n - 4) {
+      &:before {
+        opacity: 0;
+        background-color: _palette(fg);
+      }
+    }
+
+    &:nth-child(6n - 3) {
+      &:before {
+        background-color: _palette(accent3);
+      }
+    }
+
+    &:nth-child(6n - 2) {
+      &:before {
+        background-color: _palette(accent4);
+      }
+    }
+
+    &:nth-child(6n - 1) {
+      &:before {
+        background-color: _palette(accent5);
+      }
+    }
+
+    &:nth-child(6n) {
+      &:before {
+        background-color: _palette(accent6);
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    article {
+      @include padding(1em, 1em);
+      height: 50vh;
+      max-height: 50em;
+      min-height: 20em;
+    }
+  }
+
+  @include breakpoint(medium) {
+    article {
+      width: 100% !important;
+    }
+  }
+
+  @include breakpoint(small) {
+    article {
+      @include padding(3em, 1.5em);
+      height: 100%;
+      max-height: none;
+      min-height: 0;
+
+      h3 {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  @include breakpoint(xsmall) {
+    display: block;
+
+    article {
+      width: 100% !important;
+    }
+  }
 }
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-
-.popup {
-	position: relative;
-	display: inline-block;
-	cursor: pointer;
-}
-
-/* The actual popup (appears on top) */
-.popup .popuptext {
-	visibility: hidden;
-	width: 160px;
-	background-color: #555;
-	color: #fff;
-	text-align: center;
-	border-radius: 6px;
-	padding: 8px 0;
-	position: absolute;
-	z-index: 1;
-	bottom: 125%;
-	left: 50%;
-	margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-	content: "";
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	margin-left: -5px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-	visibility: visible;
-	-webkit-animation: fadeIn 1s;
-	animation: fadeIn 1s
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-				}
-				ul {
-					margin-bottom: 0;
-					li {
-						p {
-							margin-bottom: 5px;
-							font-size: 1rem;
-						}
-					}
-				}
-			}
-		}
-		article {
-			@include vendor('align-items', 'center');
-			@include vendor('display', 'flex');
-			@include vendor('transition', (
-				'transform 0.25s ease',
-				'opacity 0.25s ease',
-				'filter 1s ease',
-				'-webkit-filter 1s ease'
-			));
-			@include padding(2em, 2em);
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			cursor: default;
-			height: 50vh;
-			max-height: 50em;
-			min-height: 23em;
-			overflow: hidden;
-			position: relative;
-			width: 40%;
-
-			.image {
-				display: none;
-			}
-
-			header {
-				position: relative;
-				z-index: 3;
-			}
-
-			h3 {
-				font-size: 1.75em;
-				display: inline-block;
-				padding: .5rem 0 .25rem;
-				margin: 0 auto;
-				color: #fff;
-				font-weight: bold;				
-			}
-
-			.link.primary {
-				border: 0;
-				height: 100%;
-				left: 0;
-				position: absolute;
-				top: 0;
-				width: 100%;
-				z-index: 4;
-			}
-
-			&:before {
-				@include vendor('transition', 'opacity 0.5s ease');
-				bottom: 0;
-				content: '';
-				display: block;
-				height: 100%;
-				left: 0;
-				opacity: 0.85;
-				position: absolute;
-				width: 100%;
-				z-index: 2;
-			}
-
-			&:after {
-				background-color: transparentize(_palette(med-grey), 0.75);
-				content: '';
-				display: block;
-				height: 100%;
-				left: 0;
-				position: absolute;
-				top: 0;
-				width: 100%;
-				z-index: 1;
-			}
-
-			&:hover {
-				&:before {
-					opacity: 0;
-				}
-			}
-
-			&.is-transitioning {
-				@include vendor('transform', 'scale(0.95)');
-				@include vendor('filter', 'blur(0.5em)');
-				opacity: 0;
-			}
-
-			&:nth-child(4n - 1),
-			&:nth-child(4n - 2) {
-				width: 45%;
-			}
-			
-			&:nth-child(6n - 5) {
-				
-				h3 {
-					width:auto;
-					margin-bottom: 10px;
-				}
-				p {
-					margin: 1rem 0 1.5rem;
-					letter-spacing: normal;
-				}
-				.capitalize {
-					color: #fff;
-					font-size: 1rem;
-					text-align: center;
-					max-width: 1200px;
-					margin-left: auto;
-					margin-right: auto;
-					span {
-						font-size: 1.5rem;
-						font-weight:bolder;
-						transition: all 200ms;
-						&:hover {
-							cursor: pointer;
-							color: _palette(accent2);
-						}
-					}
-				}
-				ul {
-					display: flex;
-					flex-wrap: wrap;
-					justify-content: space-evenly;
-					width: 100%;
-					li {
-						box-shadow: 1px 2px 2px rgba(0, 19, 129, 0.479);
-						width:285px;
-						letter-spacing: normal;
-						list-style: none;
-						padding: .75rem;
-						// margin: 0 10px;
-						background: #fff;
-						font-size: .85rem;
-						text-align: center;
-						@media screen and (min-width:1500px) {
-							width:325px;
-						}
-						@media screen and (max-width:768px) {
-							margin: 10px 0;
-						}
-						h4 {
-							font-size: 1.25rem;
-							font-weight:bold;
-							color: _palette(bg);
-						}
-						
-					}
-				}
-				&:hover {
-					h3 {
-						// color: #000;
-						&:after {
-							background-color: #000;
-						}
-					}
-				
-				}
-				&:before {
-					opacity: .85;
-					background-color: _palette(bg);
-				}
-			}
-
-			&:nth-child(6n - 4) {
-				&:before {
-					opacity: .25;
-					background-color: _palette(fg);
-				}
-			}
-
-			&:nth-child(6n - 3) {
-				&:before {
-					background-color: _palette(accent3);
-				}
-			}
-
-			&:nth-child(6n - 2) {
-				&:before {
-					background-color: _palette(accent4);
-				}
-			}
-
-			&:nth-child(6n - 1) {
-				&:before {
-					background-color: _palette(accent5);
-				}
-			}
-
-			&:nth-child(6n) {
-				&:before {
-					background-color: _palette(accent6);
-				}
-			}
-		}
-
-		@include breakpoint(large) {
-			article {
-				@include padding(1em, 1em);
-				height: 50vh;
-				max-height: 50em;
-				min-height: 20em;
-			}
-		}
-
-		@include breakpoint(medium) {
-			article {
-				width: 100% !important;
-			}
-		}
-
-		@include breakpoint(small) {
-			article {
-				@include padding(3em, 1.5em);
-				height:100%;
-				max-height: none;
-				min-height: 0;
-
-				h3 {
-					font-size: 1.5em;
-				}
-			}
-		}
-
-		@include breakpoint(xsmall) {
-			display: block;
-
-			article {
-				
-				width: 100% !important;
-			}
-		}
-	}

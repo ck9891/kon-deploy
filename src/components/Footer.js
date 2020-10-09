@@ -2,9 +2,19 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
+
 const Footer = () => {
-    
+  const data = useStaticQuery(graphql`
+    query rlp {
+           file(relativePath: { eq: "rlp-logo.jpg" }) {
+             ...fluidImage2
+           }
+           
+         }
+  `)
+    console.log(data)
   return (
+    <>
     <footer id="footer">
       <section id="contact">
         <div className="inner">
@@ -49,12 +59,26 @@ const Footer = () => {
         </div>
         
       </section>
-      <ul className="copyright">
-        <li>&copy; Cameron Farquharson</li>
-      </ul>
+      
     </footer>
+    <footer id="subFooter">
+      <Img fluid={data.file.childImageSharp.fluid} alt="Royal Lepage" />
+    </footer>
+  </>
   )
 
 
 }
 export default Footer
+
+export const fluidImage2 = graphql`
+  fragment fluidImage2 on File {
+    childImageSharp {
+      fluid(maxWidth: 300, grayscale: true) {
+        ...GatsbyImageSharpFluid
+        src
+      }
+    }
+  }
+`;
+

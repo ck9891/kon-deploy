@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
-import ReactTooltip from 'react-tooltip'
+import Affiliate from '../components/Affiliate'
 // library.add(faEnvelope, faKey);
 
 
@@ -10,26 +10,23 @@ import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
 import servicesPic from '../assets/images/services.jpg'
-import creaLogo from '../assets/images/logo_crea.svg'
-import oreaLogo from '../assets/images/logo-orea.svg'
-import hdaaLogo from '../assets/images/logo-hdaa.gif'
+
 import Testimonial from '../components/Testimonial';
 
 const HomeIndex = ({data}) => {
         const affiliates = [
-          creaLogo,
-          // oreaLogo,
-          hdaaLogo,
-          data.logo4.childImageSharp.fluid.src,
-          data.logo5.childImageSharp.fluid.src,
+          data.crea.childImageSharp.fluid,
+          data.orea.childImageSharp.fluid,
+          data.rahb.childImageSharp.fluid,
+          data.reco.childImageSharp.fluid,
         ]
         return (
           <Layout>
             <Helmet
               title="KV Realty"
               meta={[
-                { name: 'description', content: 'Sample' },
-                { name: 'keywords', content: 'sample, something' },
+                { name: 'description', content: 'We are experts in the local real estate market and deeply rooted in the community' },
+                { name: 'keywords', content: 'Real Estate, Home Buying, Selling' },
               ]}
             ></Helmet>
 
@@ -43,19 +40,17 @@ const HomeIndex = ({data}) => {
                    
                   <div>
                     <header className="major">
-                      <h2>ETHOS</h2>
+                      <h2>Our Approach</h2>
                     </header>
-                    <div className="dictionary">
-                      <dl>
-                        <dt>Definition of ethos <small>\ ˈē-ˌthäs  \</small></dt>
-                        <dd>
-                          The distinguishing character, sentiment, moral nature, or guiding beliefs of a person, group, or institution
-                        </dd>
-                      </dl>
-                    </div>
+                    <p>We are passionate Hamilton Realtors &reg; who take pride in our city and everything it has to offer.
+                      With so much happening we understand the Hamilton real estate market is constantly evolving and we are devoted to
+                      providing you with all of the information and resources you need to make the right decision. 
+                      Authenticity and Integrity are teh foundation of everything we do and you should expect
+                      nothing but the highest level of service when working with us.
+                    </p>
                     </div>
                     <div className="person-card">
-                      <Img fluid={data.imageOne.childImageSharp.fluid} />
+                      <Img fluid={data.imageOne.childImageSharp.fluid} alt="Konstantinos Violaris" />
                       <p>Konstantinos Violaris</p>
                     </div>
                   </section>
@@ -63,24 +58,29 @@ const HomeIndex = ({data}) => {
               </section>
               <section
                 id="one"
-                className="tiles services-container"
-                style={{ backgroundImage: `url(${servicesPic})` }}
+                className="tiles services-container services"
+                
               >
-                <article className="services" id="whatWeDo">
-                  <header className="major">
-                    <h3>What We Do</h3>
-                    <p className="capitalize">
-                      Dedicated to establishing partnerships with individuals
+                <div className="col__1" id="whatWeDo" style={{ backgroundImage: `url(${servicesPic})` }}>
+                  <h3>Services</h3>
+                  <p className="capitalize">
+                      Born and raised in Hamilton, we are experts in the local real estate market and deeply rooted in the community. Our mission is to not only find you the right property, but place you in the perfect community. 
+    
+                    </p>
+                </div>
+
+                <article className="major col__2">
+                    
+                    {/* <p className="capitalize">
+                      {/* Dedicated to establishing partnerships with individuals
                       and organizations whose primary purpose is to enhance the
                       communities they do business in. Particularly interested
                       in researching and analyzing real estate markets to
                       identify meaningful opportunities at an early stage or
-                      that may have been overlooked previously.
-                      {/* <span data-tip data-for="test">Tooltip</span>
-                      <ReactTooltip id='test' type='error'>
-                        <span>Show happy face</span>
-                      </ReactTooltip> */}
-                    </p>
+                      that may have been overlooked previously. 
+                    
+                    </p> 
+                    */}
                     {/* <p className="capitalize">
                       Born and raised in Hamilton, I am an expert in the local real estate market and deeply 
                       rooted in the community. My mission is to not only find you the right property, but place you
@@ -89,55 +89,55 @@ const HomeIndex = ({data}) => {
                       I want to make sure your income properties get you the value you deserve and that you can continue acquiring
                       <span> more investments </span>, pain free. If you are looking to <span>sell your business</span> , I will make sure the
                       right buyer takes on your business so that you can enjoy your next adventure worry free.
-                    </p> */}
-                    {/* <p>
-                      <ul className="services-list">
+                    </p>  */}
+
+                      <ol className="services-list">
                         <li>
-                          <h4>Landlord and Tenant Representation</h4>
-                          {<FontAwesomeIcon icon={faUserFriends} size="3x" />}
+                          <h4>Home Seller Representation</h4>
                           <p>
-                            We will represent both landlords and tenants with
-                            commercial property needs.
+                            A structured listing approach that ensures home sellers are comfortable and confident throughout the entire process.
                           </p>
                         </li>
                         <li>
-                          <h4>Investment Sales</h4>
-                          {<FontAwesomeIcon icon={faCoins} size="3x" />}
+                          <h4>Home Buyer Representation</h4>
                           <p>
-                            Help with selling your income producing real estate.
+                            Arming Our Buyers With:
                           </p>
+                          <ul>
+                            <li>Market Research</li>
+                            <li>Neighbourhood Information</li>
+                            <li>Negotiation Strategy</li>
+                          </ul>
                         </li>
                         <li>
-                          <h4>Land Acquisitions</h4>
-                          {<FontAwesomeIcon icon={faFileSignature} size="3x" />}
-                          <p>
-                            Planning and execution of land acquisitions and
-                            dispositions of development land.
-                          </p>
+                          <h4>Commercial Real Estate</h4>
+                          <ul>
+                            <li>Landlord/Tenant Representation</li>
+                            <li>Developmemnt Land Aquisitions/Dispositions</li>
+                            <li>Investment Sales</li>
+                          </ul>
                         </li>
                         <li>
-                          <h4>Sale of Business</h4>
-                          {<FontAwesomeIcon icon={faMoneyBill} size="3x" />}
+                          <h4>Multi-Family Investments</h4>
                           <p>
-                            Assistance with all aspects selling your business.
+                            Constant building our database of off-market opportunities.
                           </p>
                         </li>
-                      </ul>
-                    </p> */}
-                  </header>
-                </article>
+                      </ol>
+                  </article>
               </section>
 
-              <section id="testimonials">
-                <h3>Testimonials</h3>
-                <div className="testimonial-row">
-                   <Testimonial
+              <section id="affiliates">
+                <h3>Affiliates</h3>
+                <div className="affiliates-row">
+                   {/* <Testimonial
                    person = "MRKT Collective"
                    text = "lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum"
-                   />
-                {/* {
+                   /> */}
+                {
                   affiliates.map((k, v)=> <Affiliate imgUrl={k} />)
-                } */}
+                }
+                
                 </div>
                
               </section>
@@ -165,12 +165,17 @@ export const HEADSHOT_QUERY = graphql`
            imageOne: file(relativePath: { eq: "kv-headshot.jpg" }) {
              ...fluidImage
            },
-           logo4:file(relativePath: { eq: "mainLogo.png" }) {
+           crea: file(relativePath: { eq: "crea logo.png" }) {
              ...fluidImage
            },
-           logo5:file(relativePath: { eq: "RAHB-logo_hztrans_video.png" }) {
+           orea: file(relativePath: { eq: "orea logo.png" }) {
              ...fluidImage
-           }
-
+           },
+           rahb: file(relativePath: { eq: "rahb logo1.png" }) {
+             ...fluidImage
+           },
+           reco: file(relativePath: { eq: "reco logo.png" }) {
+             ...fluidImage
+           },
          }
        `
