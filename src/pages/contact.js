@@ -50,6 +50,7 @@ const Contact = ({data}) => {
                     <form id="contactForm" onSubmit={
                       async event => {
                         event.preventDefault()
+
                         // createSubmission({
                         //   variables: {
                         //     clientMutationId: 'example',
@@ -59,8 +60,13 @@ const Contact = ({data}) => {
                         //     message: messageValue,
                         //   }
                         // })
+                        
                       }
-                    }>
+                    }
+                    name="Contact Form" method="POST" data-netlify="true" action="/thank-you" 
+                    >
+                        <input type="hidden" name="form-name" value="Contact Form" />
+
                         <label for="fullName">
                             Your Name
                             <input type="text" name="fullName" placeholder="John Doe" value={fullNameValue} 
@@ -77,8 +83,8 @@ const Contact = ({data}) => {
                               }
                             />
                         </label>
-                        <label for="message">Message
-                            <textarea name="message" onChange={event => {setMessageValue(event.target.value)}}>{messageValue}</textarea>
+                        <label for="message"><span className="sr-only">Message</span>
+                            <textarea name="message" onChange={event => {setMessageValue(event.target.value)}} placeholder="What is your question?">{messageValue}</textarea>
                         </label>
                         <button id="getInTouch" type="submit">Get in Touch</button>
                     </form>
