@@ -47,23 +47,7 @@ const Contact = ({data}) => {
                 <div className="inner" id="contactUs">
                     <h2>Contact Us</h2>
                     <>
-                    <form id="contactForm" onSubmit={
-                      async event => {
-                        event.preventDefault()
-
-                        // createSubmission({
-                        //   variables: {
-                        //     clientMutationId: 'example',
-                        //     fullName: fullNameValue,
-                           
-                        //     email: emailValue,
-                        //     message: messageValue,
-                        //   }
-                        // })
-                        
-                      }
-                    }
-                    name="Contact Form" method="POST" data-netlify="true" action="/thank-you" 
+                    <form id="contactForm" name="Contact Form" method="POST" data-netlify="true" action="/thank-you" 
                     >
                         <input type="hidden" name="form-name" value="Contact Form" />
 
