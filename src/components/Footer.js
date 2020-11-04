@@ -1,7 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -12,10 +13,23 @@ const Footer = () => {
            
          }
   `)
-    console.log(data)
+    const [ref, inView] = useInView({
+      triggerOnce: true,
+      rootMargin: '-100px 0px',
+    });
   return (
     <>
-    <footer id="footer">
+    <motion.footer id="footer"
+      ref={ref}
+      animate={{
+        opacity: inView ? 1 : 0,
+        x: inView ? 0 : -150
+      }}
+       transition={{
+       
+        default: { duration: 1 },
+      }}
+    >
       <section id="contact">
         <div className="inner">
           <section>
@@ -60,7 +74,7 @@ const Footer = () => {
         
       </section>
       
-    </footer>
+    </motion.footer>
     <footer id="subFooter">
       <Img fluid={data.file.childImageSharp.fluid} alt="Royal Lepage" />
     </footer>

@@ -8,7 +8,7 @@
 
 #main {
   background-color: _palette(bg-alt);
-
+  overflow: hidden;
   .services {
     color: _palette(text-colour);
     display: flex;
@@ -30,6 +30,8 @@
         z-index: 100;
       }
       h3 {
+        font-size: 1.75em;
+        font-weight: bold;
         margin-left: auto;
         margin-right: auto;
       }
@@ -48,7 +50,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-height: 75vh;
+        min-height: 625px;
       }
     }
     @media (min-width: 1000px) {
@@ -104,16 +106,6 @@
           position: relative;
           z-index: 10;
           margin-bottom: 0;
-          &:after {
-            content: '';
-            position: absolute;
-            z-index: -1;
-            bottom: -2px;
-            left: 10px;
-            width: 100%;
-            height: 2px;
-            background-color: _palette(highlight);
-          }
         }
         .gatsby-image-wrapper {
           max-width: 300px;
@@ -154,7 +146,6 @@
       margin: 0 auto;
       color: #333;
       font-weight: bold;
-      text-transform: uppercase;
     }
     .inner {
       p {
