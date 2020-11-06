@@ -70,7 +70,7 @@ const Contact = ({data, location}) => {
                             />
                         </label>
                         <label for="message"><span className="sr-only">Message</span>
-                            <textarea required name="message" onChange={event => {setMessageValue(event.target.value)}} placeholder="What is your question?">{messageValue}</textarea>
+                            <textarea required name="message" onChange={event => {setMessageValue(event.target.value)}} placeholder="What is your question?">{messageValue ? messageValue : 'What is your question?'}</textarea>
                         </label>
                         <button id="getInTouch" type="submit">Get in Touch</button>
                     </form>
