@@ -55,6 +55,7 @@ const Contact = ({data, location}) => {
                             Your Name
                             <input type="text" name="fullName" placeholder="John Doe" value={fullNameValue} 
                               onChange={event => {setFullNameValue(event.target.value)}}
+                              required
                             />
                         </label>
                         <label for="email">
@@ -65,10 +66,11 @@ const Contact = ({data, location}) => {
                                   setEmailValue(event.target.value)
                                 }
                               }
+                              required
                             />
                         </label>
                         <label for="message"><span className="sr-only">Message</span>
-                            <textarea name="message" onChange={event => {setMessageValue(event.target.value)}} placeholder="What is your question?">{messageValue}</textarea>
+                            <textarea required name="message" onChange={event => {setMessageValue(event.target.value)}} placeholder="What is your question?">{messageValue}</textarea>
                         </label>
                         <button id="getInTouch" type="submit">Get in Touch</button>
                     </form>
