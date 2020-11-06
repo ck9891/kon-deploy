@@ -47,7 +47,7 @@ const Contact = ({data}) => {
                 <div className="inner" id="contactUs">
                     <h2>Contact Us</h2>
                     <>
-                    <form id="contactForm" name="Contact Form" method="POST" data-netlify="true" action="/thank-you" 
+                    <form id="contactForm" name="Contact Form" action="https://getform.io/f/27d00157-7bb4-41d9-8ec5-8a9f4299deb4" method="POST" 
                     >
                         <input type="hidden" name="form-name" value="Contact Form" />
 
