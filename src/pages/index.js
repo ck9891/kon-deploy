@@ -13,7 +13,7 @@ import servicesPic from '../assets/images/services.jpg'
 import Services from '../components/Services'
 import Affilliates from '../components/Affilliates'
 
-const HomeIndex = ({data}) => {
+const HomeIndex = ({data, location}) => {
         const affiliates = [
           data.crea.childImageSharp.fluid,
           data.orea.childImageSharp.fluid,
@@ -25,7 +25,7 @@ const HomeIndex = ({data}) => {
           rootMargin: '-100px 0px',
         });
         return (
-          <Layout>
+          <Layout location={location}>
             <Helmet
               title="KV Realty"
               meta={[

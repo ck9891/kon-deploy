@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import {Link} from 'gatsby'
 import logo from '../assets/images/logo.png'
 
-const Header = (props) =>{
+const Header = ({location}) =>{
+    console.log(location)
     return (
     <>
     <header id="preHeader">
@@ -32,9 +33,9 @@ const Header = (props) =>{
             <img url={logo} />
         <nav className="jump-menu">
             <ul>
-                <li><a href="#whoWeAre">Our Approach</a></li>
-                <li><a href="#whatWeDo">Services</a></li>
-                <li><a href="#affiliates">Affiliates</a></li>
+                <li><a href="/#whoWeAre">Our Approach</a></li>
+                <li><a href="/#whatWeDo">Services</a></li>
+                <li><a href="/#affiliates">Affiliates</a></li>
                 <li><Link to="/contact">Get In Touch</Link></li>
             </ul>
         </nav>

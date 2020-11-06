@@ -23,7 +23,7 @@ import Layout from '../components/layout'
 //   }
 // `
 
-const Contact = ({data}) => {
+const Contact = ({data, location}) => {
         
         const [fullNameValue, setFullNameValue] = useState('')
         const [emailValue, setEmailValue] = useState('')
@@ -32,7 +32,7 @@ const Contact = ({data}) => {
 
         return (
           
-          <Layout>
+          <Layout location={location}>
             <Helmet
               title="KV Realty"
               meta={[

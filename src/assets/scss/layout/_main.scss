@@ -45,6 +45,7 @@
       width: 100%;
       @media (min-width: 1000px) {
         width: 50%;
+        padding-left: 48px;
       }
       &.major {
         flex-direction: column;

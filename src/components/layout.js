@@ -10,7 +10,7 @@ class Layout extends React.Component {
         super(props)
         this.state = {
             isMenuVisible: false,
-            loading: 'is-loading'
+            loading: 'is-loading',
         }
         this.handleToggleMenu = this.handleToggleMenu.bind(this)
     }
@@ -35,11 +35,11 @@ class Layout extends React.Component {
 
     render() {
         const { children } = this.props
-
+        console.log(this.props)
         return (
             <div className={`body ${this.state.loading} ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}>
                 <div id="wrapper">
-                    <Header onToggleMenu={this.handleToggleMenu} />
+                    <Header onToggleMenu={this.handleToggleMenu} location={this.props.location} />
                     {children}
                     <Footer />
                 </div>
