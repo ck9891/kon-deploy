@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 
 const Banner = (props) => (
@@ -10,7 +11,8 @@ const Banner = (props) => (
                 <p>Your Credible Source For Commercial Real Estate In Hamilton.</p>
                 
                 <ul className="actions">
-                    <li><a href="#one" className="button scrolly">Get in Touch</a></li>
+                    
+                    <li><Link to="/contact" className="button scrolly">Get in Touch</Link></li>
                 </ul>
                 
             </div>

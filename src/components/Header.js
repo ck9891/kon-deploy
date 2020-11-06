@@ -27,9 +27,11 @@ const Header = ({location}) =>{
             </div>
     </header>
     <header id="header" className="alt">
+        <Link to="/">
         <div className="logo-bg" style={{ backgroundImage: `url(${logo})` }}>
 
         </div>
+        </Link>
             <img url={logo} />
         <nav className="jump-menu">
             <ul>
