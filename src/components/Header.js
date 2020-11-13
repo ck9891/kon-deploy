@@ -12,7 +12,7 @@ const Header = ({location}) =>{
               <span className="icon alt fa-home"></span>
               <h3>Address:&nbsp;</h3>
               <span>
-                270 Sherman Ave N, Hamilton, ON L8L 6 N4 Suite #301
+              987 Rymal Rd E Hamilton ON L9B 2B9
               </span>
             </div>
         <div className="contact-method">
